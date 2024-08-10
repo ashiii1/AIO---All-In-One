@@ -1,0 +1,85 @@
+.wishlist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Proxima Nova", Montserrat, Arial, sans-serif;
+}
+
+.wishlist-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 10px;
+}
+
+.wishlist-container h2 {
+    color: #3E5962;
+}
+
+.wishlist-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 7px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    margin-top: 10px;
+    max-width: 350px;
+    height: 350px;
+}
+
+.wishlist-img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+
+}
+.wishlist-item img {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+}
+
+.wishlist-item button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ff8800;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.wishlist-item button:hover {
+    color: #ff6600;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.wishlist-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    font-weight: 600;
+    color: #666;
+}
+
+.wishlist-empty img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.wishlist-empty button {
+    border: none;
+    background-color: #ff8800;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.payment {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+}
+.payment>h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgb(234, 237, 237);
+    border-bottom: 1px solid lightgray;
+}
+
+.payment>h1 a {
+    text-decoration: none;
+    color: #3E5962;
+}
+
+.payments-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 15%;
+}
+
+.payment__section-left {
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid lightgray;
+}
+
+.payment__section-right {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid lightgray;
+}
+
+.payment__title {
+    border-bottom: 1px solid lightgray;
+}
+
+.payment__title h3 {
+    text-align: center;
+}
+
+.payment__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.address-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-wrapper {
+    display: flex;
+    
+}
+
+
+.address-wrapper input {
+    border: none;
+    width: 100%;
+}
+
+.address-wrapper input:focus {
+    outline: none;
+}
+
+.item__summary {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-height: 200px;
+    overflow-y: scroll;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.summary-product {
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+    gap: 20px;
+    width: 90%;
+}
+
+.summary-product__image {
+    max-width: 70px;
+    max-width: 70px;
+}
+
+.summary-total {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-total-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.underline {
+    padding-top: 10px;
+    border-top: 1px solid lightgray;
+}
+
+@media screen and (max-width: 768px) {
+    .payments-wrapper {
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    .address-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .name-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    
+}

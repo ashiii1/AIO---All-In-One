@@ -1,9 +1,18 @@
 import React from 'react'
+import { Analytics } from "@vercel/analytics/react";
+import { StateProvider } from "./contexts/StateContext";
+import FurnitureApp from './FurnitureApp'
 
 const FurnitureMain = () => {
-  return (
-    <div>FurnitureMain</div>
-  )
+ 
+return(
+
+    <StateProvider>
+        <FurnitureApp />
+        <Analytics />
+    </StateProvider>
+);
+
 }
 
 export default FurnitureMain

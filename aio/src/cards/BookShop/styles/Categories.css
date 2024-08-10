@@ -1,0 +1,36 @@
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.categories span {
+    margin-left: 10px;
+}
+
+.categories-link {
+   border: 1px solid #e2dcdc;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease;
+   height: 350px;
+    width: 250px;
+   background-color: #fff;
+   color: #346250;
+}
+
+
+.categories-link:hover {
+    transform: scale(0.9);
+}
+
+.categories-link:active {
+    transform: scale(1);
+}
+
+.pagination {
+    display: flex;
+    justify-self: end;
+}

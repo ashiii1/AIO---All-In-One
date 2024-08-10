@@ -1,8 +1,11 @@
 import React from 'react'
+import GroceryApp from './GroceryApp'
 
 const GroceryMain = () => {
   return (
-    <div>GroceryMain</div>
+    <div>
+      <GroceryApp/>
+    </div>
   )
 }
 

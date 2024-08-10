@@ -1,8 +1,12 @@
 import React from 'react'
+import ShopApp from './ShopApp'
+
 
 const ShoppingMain = () => {
   return (
-    <div>ShoppingMain</div>
+    <div>
+      <ShopApp/>
+    </div>
   )
 }
 

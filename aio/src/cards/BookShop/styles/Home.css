@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.home {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.home-content {
+    display: flex;
+    position: relative;
+}
+
+.greeting-words {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.greeting{
+    max-height: 100px;
+    max-width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+}
+
+.card-img {
+     width: 100%;
+     max-width: 200px;
+}
+
+.home-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.categories-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.card img {
+    max-height: 250px;
+}
+
+.see-all {
+    background-color: #3E5962;
+    color: #fff;
+    font-size: 1.3rem;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.see-all:hover {
+    background-color: #326241;
+}
+
+@media screen and (min-width: 768px){
+    .greeting {
+        max-height: 250px;
+        max-width: 220px;
+    }
+}
