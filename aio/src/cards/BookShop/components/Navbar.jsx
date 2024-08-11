@@ -53,9 +53,9 @@ function Navbar() {
     const uniqueCategories = [...new Set(allCategories)];
 
     return (
-        <div className="navbar">
-            <div className="navbar-first">
-                <div className="navbar-links">
+        <div className="navbarb">
+            <div className="navbarb-first">
+                <div className="navbarb-links">
                     <Link to="https://www.google.com/maps?q=Umbreon+Books,+near+upc+church,+Zuangtui,+Aizawl,+Mizoram+796014&ftid=0x374debac308b7d17:0x967946d1a761b999&hl=en-IN&gl=in&entry=gps&lucs=47062720&g_ep=CAISBjYuNTYuMhgAINeCAyoINDcwNjI3MjBCAklO&g_st=iw">
                         <CiLocationOn />
                     </Link>
@@ -63,9 +63,9 @@ function Navbar() {
                         <h5>Umbreon Books</h5>
                     </Link>
                 </div>
-                <div className="navbar-right">
-                    <div className="navbar-links">
-                    <div className="dropdown">
+                <div className="navbarb-right">
+                    <div className="navbarb-links">
+                    <div className="dropdownb">
                         <select name="categories" id="categories" value={selectedCategory} onChange={handleCategoryChange}>
                             <option value="">Categories</option>
                             {uniqueCategories.map((category, index) => (
@@ -74,24 +74,24 @@ function Navbar() {
                         </select>
                     </div>
                 </div>
-                <div className="navbar-wishlist">
+                <div className="navbarb-wishlist">
                     <Link to="/wishlist"
                     className='wishlist'>
-                        <FaHeart className='navbar-wishlist-icon'/>
+                        <FaHeart className='navbarb-wishlist-icon'/>
                         <span>Wishlist</span>
                     </Link>
                 </div>
                 </div>
             </div>
 
-            <div className="navbar-second">
-                <div className="navbar-search">
+            <div className="navbarb-second">
+                <div className="navbarb-search">
                     <IoArrowBack className='back-icon'onClick={goBack} />
                     <input type="text" placeholder="Search" value={searchValue} onChange={handleSearchChange} />
                     <span className="search-icon"><BsSearchHeart /></span>
                 </div>
                 <Link to="/checkout">
-                    <div className="navbar-cart">
+                    <div className="navbarb-cart">
                         <IoCartOutline className='cart-icon' />
                         <span className='count-cart'>{cart.length}</span>
                     </div>
@@ -101,7 +101,7 @@ function Navbar() {
             {searchValue.trim() !== '' && (
                 <div className="search-results">
                     {searchResults.slice(0, 7).map((book, index) => (
-                        <div key={book.title}>
+                        <div key={index}>
                             <p onClick={() => navigateToBookDetails(book.title)}>
                                 {book.title}
                             </p>

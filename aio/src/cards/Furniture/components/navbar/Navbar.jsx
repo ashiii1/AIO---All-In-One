@@ -29,6 +29,13 @@ export const NavList = ({ className, handleIsToggled }) => {
           onClick={handleIsToggled}
         ></NavLinkList>
       </li>
+
+
+     
+  
+
+
+
       <li>
         <NavHashList
           href="#about"
@@ -78,7 +85,7 @@ export const Navbar = ({ className }) => {
           className="text-primary-black"
           handleIsToggled={handleIsToggled}
         />
-        <div className="overlay"></div>
+        <div className="overlayy"></div>
       </nav>
 
       <nav

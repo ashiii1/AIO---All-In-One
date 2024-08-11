@@ -410,7 +410,7 @@ const MyAcconutPaymentMethod = () => {
                   <div>
                     {/* Form */}
                     <form className="row mb-4">
-                      <div className="mb-3 col-12 col-md-12 mb-4">
+                      <div className=" col-12 col-md-12 mb-4">
                         <h5 className="mb-3">Credit / Debit card</h5>
                         {/* Radio button */}
                         <div className="d-inline-flex">

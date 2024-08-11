@@ -14,7 +14,7 @@ const CartItem = ({
   handleCartQuantity,
 }) => {
   return (
-    <div className="space-y-4">
+    <div className="">
       {/* check if the cart is empty, tell them to go shopping*/}
       {cartProducts.length < 1 && (
         <div className="flex flex-col gap-6 justify-center items-center text-[1rem]">

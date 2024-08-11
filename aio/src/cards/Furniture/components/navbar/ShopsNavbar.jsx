@@ -83,7 +83,7 @@ export const ShopsNavbar = () => {
           currentColor="hsl(0, 0%, 63%)"
         />
         {/* shopping nav-list  */}
-        <NavListShop className="max-w-[6em]  text-primary-darkGray  " />
+        {/* <NavListShop className="max-w-[6em]  text-primary-darkGray  " /> */}
 
         {/* <!-- Mobile-navigation --> */}
         <nav
@@ -103,7 +103,7 @@ export const ShopsNavbar = () => {
             className="text-primary-black"
             handleIsToggled={handleIsToggled}
           />
-          <div className="overlay basis-0 text-[#fff] "></div>
+          <div className="overlayy basis-0 text-[#fff] "></div>
         </nav>
 
         <nav

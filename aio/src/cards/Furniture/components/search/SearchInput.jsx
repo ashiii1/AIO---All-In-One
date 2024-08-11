@@ -14,7 +14,7 @@ const SearchInput = ({ searchItem, handleSearch, toggle = null }) => {
         } lg:hidden peer min-w-[5rem] w-full focus:outline-primary-darkGray rounded-sm focus:border-none outline-offset-0  items-center mt-0 bg-transparent focus:border-primary-darkGray border-[1.7px] active:border-primary-darkGray placeholder:text-primary-veryDarkGray placeholder:text-[0.9rem] text-primary-darkGray placeholder:font-primary font-medium pl-4 pr-2 py-2 self-center`}
         placeholder="Looking for our products"
         name="search-input"
-        labelIconClass="none w-0 h-0"
+        labelIconClass="nonee w-0 h-0"
         labelClass="absolute right-1 md:-right-4 lg:hidden"
         value={searchItem}
         onChange={(e) => handleSearch(e)}

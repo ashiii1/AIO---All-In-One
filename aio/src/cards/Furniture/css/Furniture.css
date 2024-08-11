@@ -1,4 +1,4 @@
-/* :root {
+  :root {
     scroll-behavior: smooth;
   
     --color-dark-gray: hsl(0, 0%, 63%);
@@ -18,8 +18,8 @@
     --bp-medium: 55.63em;
     --bp-small: 23.44em;
   }
-  
-  *,
+   
+  /* *,
   *::after,
   *::before {
     margin: 0;
@@ -37,8 +37,8 @@
     font-family: var(--font-primary);
     font-weight: var(--font-weight-00);
     background-color: var(--color-white);
-  } */
-  
+  } 
+   */ 
   .full-bleedss {
     box-shadow: 0 0 0 100vmax rgba(243, 244, 246, 1);
     box-shadow: 0 0 0 100vmax #edefee;
@@ -302,7 +302,7 @@
   .flex {
     display: flex;
   }
-  .none {
+  .nonee {
     display: none;
   }
   .navv {
@@ -349,8 +349,8 @@
     color: var(--color-black);
     background-color: var(--color-white);
   }
-  
-  .overlay {
+
+  .overlayy {
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -360,7 +360,26 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.726);
     z-index: 100;
-  }
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   @media screen and (max-width: 28.44em) {
     .ptl {
       padding: 3.5em 0 0 2em;
@@ -468,4 +487,4 @@
     width: 50%;
     transition: width 0.3s ease-out;
   }
-  
+   

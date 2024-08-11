@@ -2,7 +2,7 @@ import { Outlet, useParams } from "react-router-dom";
 import { useRef } from "react";
 
 import { useStateContext } from "../contexts/StateContext";
-import { ShopsNavbar } from "../components/navbar/ShopsNavbar";
+// import { ShopsNavbar } from "../components/navbar/ShopsNavbar";
 import Cart from "../components/cart/Cart";
 import SearchResultCount from "../components/search/SearchResultCount";
 import Wishlist from "../components/wishlist/Wishlist";
@@ -31,7 +31,6 @@ export const ShopsLayout = () => {
     // set relative positioning for the container if cart is Open
     <div ref={shopRef} className={`${showCart ? "relative" : " "}`}>
       <div className={`custom-containerr  bg-primary-white pt-10 `}>
-        <ShopsNavbar />
         <SearchResultCount
           styleResult="lg:hidden text-primary-veryDarkGray mt-8"
           searchItem={searchItem}

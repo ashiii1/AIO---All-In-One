@@ -5,7 +5,7 @@ const cardsData = [
   { imageSrc: 'https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9b4ae874-8ae2-11ee-87cc-5c1387c06794.jpg?crop=1600%2C900%2C0%2C0&resize=1200', title: 'Books', description: 'Best book store', link: '/books' },
   { imageSrc: 'https://5.imimg.com/data5/LE/QK/KP/IOS-76296248/product-jpeg-1000x1000.png', title: 'Furniture', description: 'Exchange your furniture', link: '/furnituree' },
   { imageSrc: 'https://market.todaypricerates.com/images/gocery.jpg', title: 'Grocery', description: 'Fresh groceries available', link: '/grocery' },
-  { imageSrc: 'https://www.weddingsutra.com/images/Vendor_Images/Bridal_Jewellery/Kalyan_Jewellers/Muslim_Nikkah.jpg', title: 'Jewellery', description: 'Elegant jewellery collections', link: '/jewellary' },
+  { imageSrc: 'https://www.weddingsutra.com/images/Vendor_Images/Bridal_Jewellery/Kalyan_Jewellers/Muslim_Nikkah.jpg', title: 'Makeup', description: 'Elegant Makeup Products', link: '/makeup' },
   { imageSrc: 'https://boutiquestoredesign.com/wp-content/uploads/2018/09/clothes-store-floating-wall-display-shelves-design-ideas-for-retail.jpg', title: 'Shopping', description: 'Trendy clothes and accessories', link: '/shopping' },
   { imageSrc: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg', title: 'To Let', description: 'Get into your new house', link: '/tolet' },
   { imageSrc: 'https://tse3.mm.bing.net/th?id=OIP.YTTvKnlFKw5hlbwIGYTo9AAAAA&pid=Api&P=0&h=180', title: 'Foodorder', description: 'Get into your new house', link: '/food-order' },

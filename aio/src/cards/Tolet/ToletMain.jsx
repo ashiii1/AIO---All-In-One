@@ -1,8 +1,7 @@
 // ToletMain.js
 import React from 'react';
 import ToletApp from './ToletApp';
-import '../../App.css'
-import { HouseContextProvider } from './components/HouseContext'; // Adjust path as needed
+import  HouseContextProvider  from './components/HouseContext'; // Adjust path as needed
 
 
 const ToletMain = () => {

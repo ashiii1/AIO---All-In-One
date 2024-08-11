@@ -9,7 +9,8 @@ import Category from "./pages/Category";
 import ProductDetail from "./pages/ProductDetail";
 import ProductPreview from "./pages/ProductPreview";
 import NotFound from "./pages/NotFound";
-
+import Cart from "./components/cart/Cart";
+import Wishlist from "./components/wishlist/Wishlist";
 import './css/Furniture.css'
 
 
@@ -27,8 +28,10 @@ const FurnitureApp = () => {    return (
             <Route path="product-category/:category/">
               <Route index element={<Category />}></Route>
               <Route path=":productid" element={<ProductPreview />}></Route>
+
             </Route>
           </Route>
+       
   
           {/* if the route doesn't match to the above routes, 
           redirect user to the not-found(404) page */}

@@ -65,7 +65,7 @@ const ShopApp = () => {
   const [cartData, setCartData] = useState(database);
 
   useEffect(() => {
-/*     const fetchProducts = async () => {
+     const fetchProducts = async () => {
       try {
         // const response = await fetch("https://dummyjson.com/products/");
         const response = await fetch(
@@ -78,7 +78,7 @@ const ShopApp = () => {
         console.log(err);
       }
     };
-    fetchProducts(); */
+    fetchProducts(); 
 
     // console.log(search);
     const filteredResults = products.filter(

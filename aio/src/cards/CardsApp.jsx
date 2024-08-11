@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShoppingMain from '../cards/Shopping/ShoppingMain';
 import VegetablesMain from '../cards/Vegetables/VegetablesMain';
-import JewellaryMain from '../cards/Jewellary/JewellaryMain';
+import MakeupMain from './Makeup/MakeupMain';
 import ToletMain from '../cards/Tolet/ToletMain';
 import GroceryMain from '../cards/Grocery/GroceryMain';
 import BookMain from '../cards/BookShop/BookMain';
@@ -24,7 +24,7 @@ const CardsApp = () => {
         <Route path="/shopping/*" element={<ShoppingMain />} />
         <Route path="/vegetables/*" element={<VegetablesMain />} />
         <Route path="food-order/*" element={<FoodOrderMain />} />
-        <Route path="/jewellary/*" element={<JewellaryMain />} />
+        <Route path="/makeup/*" element={<MakeupMain />} />
         <Route path="/furnituree/*" element={<FurnitureMain />} />
         <Route path="/tolet/*" element={<ToletMain />} />
         <Route path="/grocery/*" element={<GroceryMain />} />

@@ -30,7 +30,7 @@ const ProductCategory = () => {
                     className="z-10 object-cover block  w-full h-full"
                   />
                 </figure>
-                <figcaption className="category__figcaption drop-shadow-sm shadow-black">
+                <figcaption className="categoryy__figcaption drop-shadow-sm shadow-black">
                   {data.title} <br /> Furnitures
                   <span className=" text-base">({data.items.length})</span>
                 </figcaption>
