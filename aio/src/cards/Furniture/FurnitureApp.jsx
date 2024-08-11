@@ -18,10 +18,10 @@ const FurnitureApp = () => {    return (
       <>
         <Routes>
           {/* Home-page route */}
-          <Route path="/" element={<HomeLayout />} />
+          {/* <Route path="/" element={<HomeLayout />} /> */}
   
           {/* shops-page Route */}
-          <Route path="shopping/" element={<ShopsLayout />}>
+          <Route path="/" element={<ShopsLayout />}>
             <Route index element={<Shops />} />
             <Route path=":productid" element={<ProductDetail />}></Route>
   

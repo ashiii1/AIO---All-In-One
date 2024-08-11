@@ -55,7 +55,7 @@ const Payment = ({ index, title, image,mrp, price,author }) => {
 
   return (
     <div className='payment'>
-      <h1>Checkout(<Link to='/checkout'>{cart?.length}items</Link>)</h1>
+      <h1>Checkout(<Link to='/books/checkout'>{cart?.length}items</Link>)</h1>
         
         <div className="payments-wrapper">
           <div className="payment__section-left">

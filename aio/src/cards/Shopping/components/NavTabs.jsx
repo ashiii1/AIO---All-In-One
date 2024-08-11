@@ -13,7 +13,7 @@ function NavTabs({ search, setSearch }) {
   if(menu) {
     menuBar =  <div className="">
         <ul className="fixed w-full ml-[-10px]   mt-2 md:ml-[15px] bg-zinc-200  z-30">
-          <li className="border-b-2 border-zinc-300 w-full bg-purple-500 hover:bg-purple-900 duration-300 ">
+          <li className="border-b-2 border-zinc-300 w-full bg-green-500 hover:bg-black duration-300 ">
             <NavLink to="/shopping" className="nav-link text-2xl text-white  px-2 m-1" onClick={() => setMenu(!menu)}> Home </NavLink>          
           </li>
           <li className="border-b-2  border-zinc-300 w-full bg-purple-500 hover:bg-purple-900 duration-300">
@@ -34,7 +34,7 @@ function NavTabs({ search, setSearch }) {
 
 
   return (
-    <nav className="fixed top-0 w-full flex flex-col justify-evenly p-2  md:flex-row   h-[auto] z-10 bg-purple-700">
+    <nav className="fixed top-0 w-full flex flex-col justify-evenly p-2  md:flex-row   h-[auto] z-10 bg-green-600">
      <div className="flex mx-auto p-3 items-center justify-evenly">
       <div className="sm:mx-[-110px]" >
         <Link to="/shopping">

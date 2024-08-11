@@ -18,7 +18,7 @@ function Rating({ rating }) {
   }
 
   return (
-    <div className='star-rating'>
+    <div className='star-ratingg'>
       {stars}
     </div>
   );

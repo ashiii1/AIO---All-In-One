@@ -1,5 +1,14 @@
-// CardsMain.jsx
 import React from 'react';
+import  { useEffect, useState } from 'react';
+
+
+const banners = [
+  'https://static.vecteezy.com/system/resources/thumbnails/002/006/605/small/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-pink-backgroud-for-banner-market-ecommerce-free-vector.jpg',
+  'https://www.shutterstock.com/image-photo/fruits-vegetables-on-green-blurred-260nw-1426818593.jpg',
+  'https://www.shutterstock.com/image-vector/banner-books-concept-education-learning-260nw-2331880685.jpg',
+  'https://cdn.vectorstock.com/i/preview-1x/57/56/template-banner-for-online-store-with-shopping-vector-42935756.jpg',
+  'https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX31859615.jpg'
+];
 
 const cardsData = [
   { imageSrc: 'https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9b4ae874-8ae2-11ee-87cc-5c1387c06794.jpg?crop=1600%2C900%2C0%2C0&resize=1200', title: 'Books', description: 'Best book store', link: '/books' },
@@ -11,17 +20,63 @@ const cardsData = [
   { imageSrc: 'https://tse3.mm.bing.net/th?id=OIP.YTTvKnlFKw5hlbwIGYTo9AAAAA&pid=Api&P=0&h=180', title: 'Foodorder', description: 'Get into your new house', link: '/food-order' },
   { imageSrc: 'https://techcrunch.com/wp-content/uploads/2015/03/groceries-e1554037962210.jpg', title: 'Vegetables', description: 'Fresh vegetables for you', link: '/vegetables' },
   { imageSrc: 'https://cdn-icons-png.flaticon.com/512/10203/10203752.png', title: 'Second Hand', description: 'Buy and sell second-hand items', link: '/secondhand' },
-  { imageSrc: 'https://tse3.mm.bing.net/th?id=OIP.CKFK1fo-TcgXoWtsFJnzTgHaHa&pid=Api&P=0&h=180', title: 'Post', description: 'Post your ads here', link: '/post' },
 ];
+
+const Navbar = () => {
+  return (
+    <nav className="bg-green-600 text-white text-xl p-4 shadow-md">
+      <ul className="flex justify-around">
+        <li className='bg-green-800 text-bold text-2xl'>ASHI</li>
+        <li className="hover:text-black"><a href="/books">Books</a></li>
+        <li className="hover:text-black"><a href="/furnituree">Furniture</a></li>
+        <li className="hover:text-black"><a href="/shopping">Shopping</a></li>
+        <li className="hover:text-black"><a href="/makeup">Makeup</a></li>
+        <li className="hover:text-black"><a href="/realestate">Real Estate</a></li>
+        <li className="hover:text-black"><a href="/grocery">Grocery</a></li>
+        <li className="hover:text-black"><a href="/tolet">To Let</a></li>
+        <li className="hover:text-black"><a href="/food-order">Food Order</a></li>
+        <li className="hover:text-black"><a href="/vegetables">Vegetables</a></li>
+        <li className="hover:text-black"><a href="/secondhand">Second Hand</a></li>
+      </ul>
+    </nav>
+  );
+};
+
+const BannerSlider = () => {
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 5000); // 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-full h-96 overflow-hidden">
+      {banners.map((banner, index) => (
+        <img
+          key={index}
+          className={`absolute w-full h-96 object-cover transition-opacity duration-1000 ${index === currentBannerIndex ? 'opacity-100' : 'opacity-0'}`}
+          src={banner}
+          alt={`Banner ${index + 1}`}
+          style={{ left: `${index === currentBannerIndex ? 0 : 100}%` }}
+        />
+      ))}
+    </div>
+  );
+};
 
 const CardsMain = () => {
   return (
-    <div className="p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="p-8 bg-gray-100">
+      <h2 className="text-center text-2xl font-bold mb-8 text-green-600">Featured Categories</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="bg-white text-black rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
+            className="bg-white text-black rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
             onClick={() => window.location.href = card.link}
           >
             <img
@@ -41,187 +96,14 @@ const CardsMain = () => {
   );
 };
 
-export default CardsMain;
+const LandingPage = () => {
+  return (
+    <div>
+      <Navbar />
+      <BannerSlider />
+      <CardsMain />
+    </div>
+  );
+};
 
-// // CardsMain.jsx// CardsMain.jsx
-// import React from 'react';
-
-// const CardsMain = () => {
-//   return (
-//     <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-//       <div className="flex flex-wrap gap-44">
-//         {/* Card 1 */}
-//         <div
-//           className="w-32 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/books'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F9b4ae874-8ae2-11ee-87cc-5c1387c06794.jpg?crop=1600%2C900%2C0%2C0&resize=1200"
-//             alt="Books"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Books</h3>
-//             <p className="text-xs">Best book store</p>
-//           </div>
-//         </div>
-
-//         {/* Card 2 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/furniture'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://5.imimg.com/data5/LE/QK/KP/IOS-76296248/product-jpeg-1000x1000.png"
-//             alt="Furniture"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Furniture</h3>
-//             <p className="text-xs">Exchange your furniture</p>
-//           </div>
-//         </div>
-
-//         {/* Card 3 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/grocery'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://market.todaypricerates.com/images/gocery.jpg"
-//             alt="Grocery"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Grocery</h3>
-//             <p className="text-xs">Fresh groceries available</p>
-//           </div>
-//         </div>
-
-//         {/* Card 4 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/jewellary'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://www.weddingsutra.com/images/Vendor_Images/Bridal_Jewellery/Kalyan_Jewellers/Muslim_Nikkah.jpg"
-//             alt="Jewellery"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Jewellery</h3>
-//             <p className="text-xs">Elegant jewellery collections</p>
-//           </div>
-//         </div>
-
-//         {/* Card 5 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/shopping'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://boutiquestoredesign.com/wp-content/uploads/2018/09/clothes-store-floating-wall-display-shelves-design-ideas-for-retail.jpg"
-//             alt="Shopping"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Shopping</h3>
-//             <p className="text-xs">Trendy clothes and accessories</p>
-//           </div>
-//         </div>
-
-//         {/* Card 6 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/tolet'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
-//             alt="To Let"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">To Let</h3>
-//             <p className="text-xs">Get into your new house</p>
-//           </div>
-//         </div>
-
-//         {/* Card 7 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/foodorder'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://tse3.mm.bing.net/th?id=OIP.YTTvKnlFKw5hlbwIGYTo9AAAAA&pid=Api&P=0&h=180"
-//             alt="Foodorder"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Foodorder</h3>
-//             <p className="text-xs">Order food easily</p>
-//           </div>
-//         </div>
-
-//         {/* Card 8 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/vegetables'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://techcrunch.com/wp-content/uploads/2015/03/groceries-e1554037962210.jpg"
-//             alt="Vegetables"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Vegetables</h3>
-//             <p className="text-xs">Fresh vegetables for you</p>
-//           </div>
-//         </div>
-
-//         {/* Card 9 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/secondhand'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://cdn-icons-png.flaticon.com/512/10203/10203752.png"
-//             alt="Second Hand"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Second Hand</h3>
-//             <p className="text-xs">Buy and sell second-hand items</p>
-//           </div>
-//         </div>
-
-//         {/* Card 10 */}
-//         <div
-//           className="w-full sm:w-1/3 lg:w-1/4 bg-black text-white rounded overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
-//           onClick={() => window.location.href = '/post'}
-//         >
-//           <img
-//             className="w-full h-32 object-cover"
-//             src="https://tse3.mm.bing.net/th?id=OIP.CKFK1fo-TcgXoWtsFJnzTgHaHa&pid=Api&P=0&h=180"
-//             alt="Post"
-//             style={{ objectFit: 'cover' }}
-//           />
-//           <div className="p-2">
-//             <h3 className="text-sm font-semibold">Post</h3>
-//             <p className="text-xs">Post your ads here</p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CardsMain;
+export default LandingPage;

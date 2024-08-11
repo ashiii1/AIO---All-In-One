@@ -14,7 +14,7 @@ const CheckoutProduct = ({ index, title, image,mrp, price,author }) => {
   };
   return (
     <div className="checkout-product">
-      <Link to={`/books/categories/category/${title}`}>
+      <Link to={`/books/categories/${title}`}>
         <img className="checkout-product__image" src={image} alt={title} />
       </Link>
         <div className="checkout-product__info">

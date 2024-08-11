@@ -42,7 +42,7 @@ function Categories() {
     });
   }, []);
 
-  const categoriesPerPage = 10; // Number of categories per page
+  const categoriesPerPage = 35; // Number of categories per page
   const [currentPage, setCurrentPage] = useState(1); // Current page number
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

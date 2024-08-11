@@ -49,7 +49,7 @@ function CategoryDetails() {
       <div className='details-container'>
         {displayedBooks.map((book, index) => (
           <div className='details-content' key={book.title}>
-            <Link to={`/books/categories/category/${book.title}`}>
+            <Link to={`/books/categories/categories/${book.title}`}>
               <div className="details-img">
                 <img src={book.img} alt={book.title} />
               </div>

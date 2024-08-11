@@ -31,7 +31,7 @@ const WishList = () => {
                 >
                     {/* <p>{item.title}</p>
                     <p>{item.author}</p> */}
-                    <Link to={`/books/categories/category/${item.title}`}>
+                    <Link to={`/books/categories/${item.title}`}>
                         <img 
                             src={item.img} 
                             alt={item.title}

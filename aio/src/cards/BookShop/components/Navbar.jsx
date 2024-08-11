@@ -36,7 +36,7 @@ function Navbar() {
 
     // Function to navigate to book details page
     const navigateToBookDetails = (title) => {
-        navigate(`/books/categories/category/${title}`);
+        navigate(`/books/categories/categories/${title}`);
         setSearchResults([]);
         setSearchValue('');
     };
@@ -57,11 +57,12 @@ function Navbar() {
             <div className="navbarb-first">
                 <div className="navbarb-links">
                     <Link to="https://www.google.com/maps?q=Umbreon+Books,+near+upc+church,+Zuangtui,+Aizawl,+Mizoram+796014&ftid=0x374debac308b7d17:0x967946d1a761b999&hl=en-IN&gl=in&entry=gps&lucs=47062720&g_ep=CAISBjYuNTYuMhgAINeCAyoINDcwNjI3MjBCAklO&g_st=iw">
-                        <CiLocationOn />
                     </Link>
-                    <Link to="/" className="title">
-                        <h5>Umbreon Books</h5>
+                    <div className='text-8xl font-bold'>
+                    <Link to="/books" className="title">
+                        <h5>SK Ashi</h5>
                     </Link>
+                    </div>
                 </div>
                 <div className="navbarb-right">
                     <div className="navbarb-links">
@@ -87,10 +88,10 @@ function Navbar() {
             <div className="navbarb-second">
                 <div className="navbarb-search">
                     <IoArrowBack className='back-icon'onClick={goBack} />
-                    <input type="text" placeholder="Search" value={searchValue} onChange={handleSearchChange} />
+                    <input type="text" placeholder="Search a Book" value={searchValue} onChange={handleSearchChange} />
                     <span className="search-icon"><BsSearchHeart /></span>
                 </div>
-                <Link to="/checkout">
+                <Link to="/books/checkout">
                     <div className="navbarb-cart">
                         <IoCartOutline className='cart-icon' />
                         <span className='count-cart'>{cart.length}</span>

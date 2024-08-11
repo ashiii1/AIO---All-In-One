@@ -16,7 +16,7 @@ const BookApp = () => {
       return (
         <div className="App">
           <Routes>
-            <Route path="/" element={<><Navbar/><Home /><Footer/></>} />
+            <Route path="/" element={<><Navbar/><Categories/><Footer/></>} />
             <Route path="/categories" element={<><Navbar/><Categories /><Footer/></>} />
             <Route path="/categories/:category" element={<><Navbar/><CategoryDetails /></>} />
             <Route path="/categories/:category/:title" element={<><Navbar/><BooksDetails/></>} />

@@ -51,7 +51,7 @@ const Checkout = () => {
           </>
           <button 
             className='buy-btn'
-            onClick={e =>navigate('/payment')}
+            onClick={e =>navigate('/books/payment')}
           >
             Checkout
           </button>
