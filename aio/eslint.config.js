@@ -27,6 +27,7 @@ module.exports = new ESLint({
       'react/jsx-key': 'warn',
       'react/no-unknown-property': ['error', { ignore: ['class', 'for'] }],
     },
+    
     settings: {
       react: {
         version: 'detect',

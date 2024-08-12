@@ -17,6 +17,7 @@ module.exports = {
         'proximanova-bold': ['ProximaNova Condensed Bold', 'sans-serif'],
         'proximanova-black': ['ProximaNova Condensed Black', 'sans-serif'],
       },
+      
       colors: {
         'primary-darkGray': '#333333', // Define your custom color
         'primary-black': '#000000', // Define your custom color

@@ -26,12 +26,19 @@
 // // If you want to start measuring performance in your app, pass a function
 // // to log results (for example: reportWebVitals(console.log))
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-import React from 'react'
-
+import FoodApp from './FoodApp'
+    import React from 'react'
+    import StoreContextProvider from './Context/StoreContext.jsx'
+    
+    
 const FoodOrderMain = () => {
   return (
-    <div>FoodOrderMain</div>
-  )
+          <StoreContextProvider>
+            <FoodApp />
+          </StoreContextProvider>
+    )
+    
+  
 }
 
 export default FoodOrderMain

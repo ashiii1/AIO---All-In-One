@@ -10,15 +10,6 @@ import Success from './pages/Success';
 import {Route,Routes } from "react-router-dom"
 import { useSelector } from 'react-redux';
 import Order from './pages/Order';
-import { AdminHome } from './AdminPages/AdminHome';
-import AdminRoute from './AdminRoute';
-import AdminProductList from './AdminPages/AdminProductList';
-import AdminUserList from './AdminPages/AdminUserList';
-import AdminProductEdit from './AdminPages/AdminProductEdit';
-import AdminUserEdit from './AdminPages/AdminUserEdit';
-import AdminProductAdd from './AdminPages/AdminProductAdd';
-import AdminUserAdd from './AdminPages/AdminUserAdd';
-
 
 const MakeUpApp = () => {
 
@@ -46,15 +37,7 @@ const MakeUpApp = () => {
       <Route exact  path="/forget" ><ForgetPassword/></Route>
       <Route exact  path="/resetPassword/:id/:token" ><ResetPassword/></Route>
 
-      {/*ADMIN Routes  */}
-        <AdminRoute  path="/adminHome" component={<AdminHome/>} />
-        <AdminRoute exact path="/adminProductList" component={<AdminProductList/>}/>
-        <AdminRoute exact path="/adminproductedit/:id" component={<AdminProductEdit/>}/>
-        <AdminRoute path="/adminUserList" component={<AdminUserList/>}/>
-        <AdminRoute exact path="/adminuseredit/:id" component={<AdminUserEdit/>}/>
-        <AdminRoute exact path="/adminproductadd" component={<AdminProductAdd/>}/>
-        <AdminRoute exact path="/adminuseradd" component={<AdminUserAdd/>}/>
-
+     
 
     </Routes>
     </>
