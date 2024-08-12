@@ -13,7 +13,7 @@ import { useParams } from 'react-router'
 import { publicRequest } from '../axiosMethods'
 import { useDispatch } from 'react-redux'
 import {  Toast, ToastContainer } from 'react-bootstrap'
-import Loader from "react-loader-spinner";
+import Loader, { TailSpin } from "react-loader-spinner";
 
 const Maincontainer=styled.div`
 background-color:whitesmoke;
@@ -188,7 +188,7 @@ export default function Product() {
             <Container>
             {loading ?  
                     <div className="d-flex justify-content-center m-5">
-                    <Loader
+                    <TailSpin
                         type="TailSpin"
                         color="#25283D"
                         height={100}

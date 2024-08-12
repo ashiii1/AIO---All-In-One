@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import UpperAnnouncement from "../components/UpperAnnouncement";
@@ -10,7 +9,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import Loader from "react-loader-spinner";
+import Loader, { TailSpin } from "react-loader-spinner";
 
 const Maincontainer = styled.div`
   background-color: whitesmoke;
@@ -91,7 +90,7 @@ export default function Order() {
         </TopButtons>
         {loading ? (
           <div className="d-flex justify-content-center m-5">
-            <Loader type="TailSpin" color="#25283D" height={100} width={100} />
+            <TailSpin type="TailSpin" color="#25283D" height={100} width={100} />
           </div>
         ) : (
           <Container>

@@ -1,4 +1,4 @@
-import { publicRequest } from "../axiosMethods"
+import { publicRequest } from "../axiosMethods.js"
 
 
 export const login =async (dispatch,user)=>{

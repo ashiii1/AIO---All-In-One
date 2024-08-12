@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -10,7 +9,7 @@ import Footer from "../components/Footer";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as YUP from "yup";
 import { Link } from "react-router-dom";
-import Loader from "react-loader-spinner";
+import Loader, { TailSpin } from "react-loader-spinner";
 import { large, small } from "../responsive";
 
 const Maincontainer = styled.div`
@@ -96,7 +95,7 @@ export default function AdminUserEdit() {
         <AdminNav />
         {loading ? (
           <div className="d-flex justify-content-center m-5">
-            <Loader type="TailSpin" color="#25283D" height={100} width={100} />
+            <TailSpin type="TailSpin" color="#25283D" height={100} width={100} />
           </div>
         ) : (
           <Container>

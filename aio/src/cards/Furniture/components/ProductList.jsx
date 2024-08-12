@@ -10,7 +10,7 @@ const ProductList = ({ headingTitle, headingClass, children }) => {
 
   return (
     <>
-      <main className=" full-bleedss inverseee mt-16 pt-6 pb-24">
+      <main className=" full-bleedss inverseee mt-1\6 pt-6 pb-24">
         <h1 className={productListHeadingStyle}>{headingTitle}</h1>
         {children}
       </main>

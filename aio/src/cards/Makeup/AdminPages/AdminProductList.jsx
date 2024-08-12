@@ -5,10 +5,11 @@ import styled from "styled-components";
 import AdminNav from "../AdminComponents/AdminNav";
 import Footer from "../components/Footer";
 import axios from "axios";
-import { DataGrid } from "@material-ui/data-grid";
+import {DataGrid}  from "@material-ui/data-grid";
 import { Link } from "react-router-dom";
-import { DeleteOutline, Edit } from "@material-ui/icons";
-import Loader from "react-loader-spinner";
+import  {DeleteOutline} from "@material-ui/icons";
+import  {Edit } from "@material-ui/icons";
+import { TailSpin } from "react-loader-spinner";
 import { large } from "../responsive";
 
 const Maincontainer = styled.div`
@@ -71,7 +72,9 @@ export default function AdminProductList() {
       );
       setProducts(res.data);
       setLoading(false);
-    } catch {}
+    } catch {
+      console.log("err")
+    }
   };
 
   useEffect(() => {
@@ -90,7 +93,10 @@ export default function AdminProductList() {
       );
       console.log(res);
       getProducts();
-    } catch {}
+    } catch {
+      console.log("err")
+
+    }
   };
 
   const columns = [
@@ -144,7 +150,7 @@ export default function AdminProductList() {
         <AdminNav />
         {loading ? (
           <div className="d-flex justify-content-center m-5">
-            <Loader type="TailSpin" color="#25283D" height={100} width={100} />
+            <TailSpin type="TailSpin" color="#25283D" height={100} width={100} />
           </div>
         ) : (
           <Container>

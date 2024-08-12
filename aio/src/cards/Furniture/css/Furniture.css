@@ -473,7 +473,7 @@
   }
   
   .product__auto-row {
-    grid-auto-rows: 280px;
+    grid-auto-rows: 320px;
   }
 
   .active:hover::after {

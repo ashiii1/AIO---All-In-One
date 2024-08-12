@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { useLocation, useHistory } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import styled from "styled-components";
 
 const SuccessDiv = styled.div`
@@ -14,7 +13,7 @@ const SuccessDiv = styled.div`
 
 export default function Success() {
   const location = useLocation();
-  const history = useHistory();
+  const history = useNavigate();
   console.log(location);
   const data = location.state.stripeData;
   const cart = location.state.products;

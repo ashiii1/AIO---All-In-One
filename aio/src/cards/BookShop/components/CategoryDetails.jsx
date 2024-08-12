@@ -44,7 +44,7 @@ function CategoryDetails() {
 
   return (
     <div className='categoryDetails'>
-      <h1>{category}({filteredBooks.length})</h1>
+      <h1 className='text-3xl'>{category}{"    "}({filteredBooks.length})</h1>
       <span>{`Page ${currentPage}`}</span>
       <div className='details-container'>
         {displayedBooks.map((book, index) => (

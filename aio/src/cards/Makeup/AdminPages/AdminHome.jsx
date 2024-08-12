@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import React, { useState, useMemo, useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -81,7 +80,9 @@ export const AdminHome = () => {
             { name: MONTHS[item._id - 1], "Active User": item.total },
           ])
         );
-      } catch {}
+      } catch {
+        console.log("err")
+      }
     };
     getStats();
   }, [MONTHS]);

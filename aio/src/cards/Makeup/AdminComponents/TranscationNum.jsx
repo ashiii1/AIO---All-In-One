@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
@@ -26,7 +25,9 @@ export default function TranscationNum() {
           }
         );
         setOrders(res.data);
-      } catch {}
+      } catch {
+        console.log("err")
+      }
     };
     getOrders();
   }, []);

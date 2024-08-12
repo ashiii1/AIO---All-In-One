@@ -58,13 +58,15 @@ function Navbar() {
                 <div className="navbarb-links">
                     <Link to="https://www.google.com/maps?q=Umbreon+Books,+near+upc+church,+Zuangtui,+Aizawl,+Mizoram+796014&ftid=0x374debac308b7d17:0x967946d1a761b999&hl=en-IN&gl=in&entry=gps&lucs=47062720&g_ep=CAISBjYuNTYuMhgAINeCAyoINDcwNjI3MjBCAklO&g_st=iw">
                     </Link>
-                    <div className='text-8xl font-bold'>
+                    <div className='text-8xl font-bold bg-green-500 w-24 h-16'>
+                        <div className='mt-6 ml-3 font-bold size-50'>
                     <Link to="/books" className="title">
-                        <h5>SK Ashi</h5>
+                        <h5 className=''>SK Ashi</h5>
                     </Link>
                     </div>
+                    </div>
                 </div>
-                <div className="navbarb-right">
+                <div className="navbarb-right sticky">
                     <div className="navbarb-links">
                     <div className="dropdownb">
                         <select name="categories" id="categories" value={selectedCategory} onChange={handleCategoryChange}>

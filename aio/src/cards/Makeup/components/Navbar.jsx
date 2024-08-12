@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { small,medium,large } from '../responsive'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router'
+import { useNavigate } from 'react-router'
 
 const NavContainer=styled.div`
 background-color: #25283D;
@@ -103,7 +103,7 @@ export default function Navbar() {
 const quantity=useSelector(state=>state.cart.quantity)
 const dispatch=useDispatch()
 const user=useSelector(state=>state.user)
-const history=useHistory()
+const history=useNavigate()
 const value=useSelector(state=>state.search.searchValue)
 const [search,setSearch]=useState(value)
     return (

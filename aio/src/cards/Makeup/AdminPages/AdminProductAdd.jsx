@@ -10,7 +10,8 @@ import Footer from "../components/Footer";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as YUP from "yup";
 import { Link } from "react-router-dom";
-import Loader from "react-loader-spinner";
+import Loader, { Bars } from "react-loader-spinner";
+import { Grid } from "react-loader-spinner";
 import {
   getStorage,
   ref,
@@ -272,7 +273,7 @@ export default function AdminProductAdd() {
                             >
                               Your image is uploading
                             </p>
-                            <Loader
+                            <Grid
                               type="Grid"
                               color="#adb4ec"
                               height={30}
@@ -343,7 +344,7 @@ export default function AdminProductAdd() {
                       >
                         {loading && (
                           <>
-                            <Loader
+                            <Bars
                               type="Bars"
                               color="#adb4ec"
                               height={30}

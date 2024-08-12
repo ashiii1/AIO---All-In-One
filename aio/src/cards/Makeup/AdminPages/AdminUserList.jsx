@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -9,7 +8,7 @@ import { DataGrid } from "@material-ui/data-grid";
 import { Link } from "react-router-dom";
 import { DeleteOutline, Edit } from "@material-ui/icons";
 import axios from "axios";
-import Loader from "react-loader-spinner";
+import Loader, { TailSpin } from "react-loader-spinner";
 import { large } from "../responsive";
 
 const Maincontainer = styled.div`
@@ -63,7 +62,10 @@ export default function AdminUserList() {
       );
       setUsers(res.data);
       setLoading(false);
-    } catch {}
+    } catch {
+      console.log("err")
+
+    }
   };
 
   useEffect(() => {
@@ -82,7 +84,10 @@ export default function AdminUserList() {
       );
       console.log(res);
       getUsers();
-    } catch {}
+    } catch {
+      console.log("err")
+
+    }
   };
 
   const columns = [
@@ -123,7 +128,7 @@ export default function AdminUserList() {
         <AdminNav />
         {loading ? (
           <div className="d-flex justify-content-center m-5">
-            <Loader type="TailSpin" color="#25283D" height={100} width={100} />
+            <TailSpin type="TailSpin" color="#25283D" height={100} width={100} />
           </div>
         ) : (
           <Container>

@@ -63,8 +63,8 @@ function Categories() {
 
   return (
     <div className='categories'>
-      <span>{uniqueCategories.length} Categories</span>
-      <span>Total Books:{totalBooks}</span>
+      <span className='text-3xl text-black pt-1'>{uniqueCategories.length} Categories</span>
+      <span className='text-xl text-black p-4'>Total Books:{totalBooks}</span>
       <div className="categories-card">
         {slicedCategories.map((category, index) => {
           // Get the image URL associated with the category

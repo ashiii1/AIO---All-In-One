@@ -16,8 +16,8 @@
 .navbarb-first {
     display: flex;
     justify-content: space-between;
-    height: 8vh;
-    background-color: #1ba745;
+    height: 9vh;
+    background-color: #066121;
     width: 100%;
 }
 
@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 0 10px;
+    padding: 0 50px;
     font-size: 1.1rem;
     color: #fff;
 }
@@ -101,7 +101,7 @@
 .navbarb-wishlist {
     display: flex;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 200px;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -114,7 +114,7 @@
 
 .navbarb-wishlist-icon {
     cursor: pointer;
-    color: #C39F43;
+    color: #bd0e97;
 }
 
 .navbarb-second {
@@ -168,7 +168,7 @@
 .cart-icon {
     font-size: 2.1rem;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 1px;
     margin-right: 40px;
     margin-left: 1100px;
     color: #3E5962;

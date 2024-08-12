@@ -9,8 +9,8 @@ import { useDispatch } from 'react-redux';
 import { login } from '../redux/apiCalls';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
-import Loader from "react-loader-spinner";
+import { useNavigate } from 'react-router';
+import Loader, { Bars } from "react-loader-spinner";
 
 const Container=styled.div`
 background-image:url(${background});
@@ -73,7 +73,7 @@ font-size: 1rem;
 margin-bottom: 0.5rem;
 `
 export default function Login() {
-    const history=useHistory()
+    const history=useNavigate()
     const user=useSelector(state=>state.user)
     const [loading,setLoading]=useState(false)
     if(user.currentUser)
@@ -138,7 +138,7 @@ export default function Login() {
                             <div style={{display:"flex",justifyContent:"center"}}>
                                 { loading && 
                                 <>
-                                <Loader
+                                <Bars
                                 type="Bars"
                                 color="#adb4ec"
                                 height={30}

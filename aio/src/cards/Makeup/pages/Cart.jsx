@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 // import { Add, Remove } from '@material-ui/icons'
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
@@ -12,7 +11,7 @@ import { medium, large } from "../responsive";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { ToastContainer, Toast } from "react-bootstrap";
 // import { userRequest } from '../axiosMethods'
 import axios from "axios";
@@ -77,7 +76,7 @@ const SummaryLine = styled.div`
 export default function Cart() {
   const cart = useSelector((state) => state.cart);
   const [stripeToken, setStripeToken] = useState(null);
-  const history = useHistory();
+  const history = useNavigate();
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const [alert, setAlert] = useState(false);
@@ -107,7 +106,10 @@ export default function Cart() {
           stripeData: res.data,
           products: cart,
         });
-      } catch {}
+      } catch {
+        console.log("err")
+
+      }
     };
     stripeToken && makeRequest();
   }, [stripeToken]);

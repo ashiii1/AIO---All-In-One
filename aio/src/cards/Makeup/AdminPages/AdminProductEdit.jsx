@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -11,6 +10,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as YUP from "yup";
 import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
 import { large, small } from "../responsive";
 // import {DataGrid} from "@mui/x-data-grid"
 
@@ -98,7 +98,9 @@ export default function AdminProductEdit() {
         );
         setProduct(res.data);
         setLoading(false);
-      } catch {}
+      } catch {
+        console.log("err")
+      }
     };
     getProduct();
   }, []);
@@ -117,7 +119,7 @@ export default function AdminProductEdit() {
         <AdminNav />
         {loading ? (
           <div className="d-flex justify-content-center m-5">
-            <Loader type="TailSpin" color="#25283D" height={100} width={100} />
+            <TailSpin type="TailSpin" color="#25283D" height={100} width={100} />
           </div>
         ) : (
           <Container>

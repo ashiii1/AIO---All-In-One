@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -10,7 +9,8 @@ import Footer from "../components/Footer";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as YUP from "yup";
 import { Link } from "react-router-dom";
-import Loader from "react-loader-spinner";
+// import Loader from "react-loader-spinner";
+import { Bars } from "react-loader-spinner";
 import { large, small } from "../responsive";
 
 const Maincontainer = styled.div`
@@ -197,7 +197,7 @@ export default function AdminUserAdd() {
                       >
                         {loading && (
                           <>
-                            <Loader
+                            <Bars
                               type="Bars"
                               color="#adb4ec"
                               height={30}

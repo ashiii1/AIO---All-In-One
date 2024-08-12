@@ -6,7 +6,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { large } from "../responsive";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Loader from "react-loader-spinner";
+import Loader, { Bars } from "react-loader-spinner";
 
 const Container = styled.div`
   background-image: url(${background});
@@ -120,7 +120,7 @@ export default function ForgetPassword() {
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     {loading && (
                       <>
-                        <Loader
+                        <Bars
                           type="Bars"
                           color="#adb4ec"
                           height={30}

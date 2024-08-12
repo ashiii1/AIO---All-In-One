@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
 import {useState,useEffect} from 'react'
 import  styled from 'styled-components'
 import LowerAnnouncement from '../components/LowerAnnouncement'

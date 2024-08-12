@@ -4,7 +4,7 @@ import StarRatings from 'react-star-ratings';
 import { publicRequest } from '../axiosMethods';
 import {Link} from "react-router-dom"
 import { useLocation } from 'react-router';
-import Loader from "react-loader-spinner";
+import Loader, { TailSpin } from "react-loader-spinner";
 
 
 const Container=styled.div`
@@ -85,7 +85,7 @@ const getProducts=async(filters)=>{
         <Container>
              {loading ?  
                     <div className="d-flex justify-content-center m-5">
-                    <Loader
+                    <TailSpin
                         type="TailSpin"
                         color="#25283D"
                         height={100}

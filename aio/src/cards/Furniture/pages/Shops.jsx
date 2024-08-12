@@ -15,16 +15,21 @@ const Shops = () => {
 
   return (
     <>
+    <div className="">
       <ProductCategory />
+      </div>
+      <div className="">
       {/* <ProductList headingTitle="Our Collections"> */}
-      <ProductList headingTitle="Featured Items" headingClass="mb-0 xs:mb-0">
-        <p className="mb-20 xs:mb-12 text-lg text-primary-veryDarkGray text-center">
+      <ProductList headingTitle="Featured Items" headingClass="mb-5 xs:mb-4 pt-1 pb-1">
+      
+        <p className="mb-3 xs:mb-12 text-lg text-primary-veryDarkGray text-center">
           Must-have pieces selected every month
         </p>
-        <GridLayout className="grid grid-cols-8 lg:grid-cols-6 justify-items-center lg:justify-center">
+        <GridLayout className="grid grid-cols-5 lg:grid-cols-6 justify-items-center lg:justify-center">
           <ProductItem searchItem={foundItem} />
         </GridLayout>
       </ProductList>
+      </div>
       {/* Featured Product */}
       {/* <ProductPreviewView
         productDetail={{

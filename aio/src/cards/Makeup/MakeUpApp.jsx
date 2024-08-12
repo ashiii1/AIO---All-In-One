@@ -1,8 +1,3 @@
-import React from 'react'
-
-const MakeUpApp = () => {
-  
-import './App.css';
 import  Home  from './pages/Home';
 import ProductList from './pages/ProductList';
 import Product from './pages/Product';
@@ -12,7 +7,7 @@ import Register from './pages/Register';
 import ResetPassword from './pages/ResetPassword';
 import ForgetPassword from './pages/ForgetPassword';
 import Success from './pages/Success';
-import {BrowserRouter,Route,Switch } from "react-router-dom"
+import {Route,Routes } from "react-router-dom"
 import { useSelector } from 'react-redux';
 import Order from './pages/Order';
 import { AdminHome } from './AdminPages/AdminHome';
@@ -25,15 +20,14 @@ import AdminProductAdd from './AdminPages/AdminProductAdd';
 import AdminUserAdd from './AdminPages/AdminUserAdd';
 
 
-function App() {
+const MakeUpApp = () => {
 
  const user=useSelector(state=>state.user.currentUser)
 
 
   return (
     <>
-    <BrowserRouter>
-    <Switch>
+    <Routes>
       {/* USER Routes  */}
       <Route exact path="/" ><Home/></Route>
       <Route  path="/products/:category/:item" ><ProductList/></Route>
@@ -62,8 +56,7 @@ function App() {
         <AdminRoute exact path="/adminuseradd" component={<AdminUserAdd/>}/>
 
 
-    </Switch>
-    </BrowserRouter>
+    </Routes>
     </>
   );
 }

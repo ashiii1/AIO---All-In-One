@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router'
+import { useNavigate } from 'react-router'
  import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { small,medium } from '../responsive'
@@ -56,7 +56,7 @@ ${medium({fontSize:"1rem !important" })}
 export default function AdminNav() {
 const dispatch=useDispatch()
 const user=useSelector(state=>state.user)
-const history=useHistory()
+const history=useNavigate()
     return (
         <NavContainer>
              <Wrapper>
