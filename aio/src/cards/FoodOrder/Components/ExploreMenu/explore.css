@@ -1,7 +1,7 @@
-.explore-menu-list::-webkit-scrollbar{
+.exploref-menu-list::-webkit-scrollbar{
     display: none;
 }
-.explore-menu hr{
+.exploref-menu hr{
     margin: 10px 0px;
     height: 2px ;
     background-color: #e4e4e4;
