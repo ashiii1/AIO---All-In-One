@@ -376,9 +376,8 @@ const ShopListCol = () => {
                     </div>
                   </div>
                 </div>
-                <div className="py-4">
-                  {/* Banner Design */}
-                  {/* Banner Content */}
+                {/* <div className="py-4">
+                 
                   <div className="position-absolute p-5 py-8">
                     <h3 className="mb-0">Fresh Fruits </h3>
                     <p>Get Upto 25% Off</p>
@@ -387,16 +386,14 @@ const ShopListCol = () => {
                       <i className="feather-icon icon-arrow-right ms-1" />
                     </Link>
                   </div>
-                  {/* Banner Content */}
-                  {/* Banner Image */}
-                  {/* img */}
+                  
                   <img
                     src={assortment}
                     alt="assortment"
                     className="img-fluid rounded-3"
                   />
-                  {/* Banner Image */}
-                </div>
+                 
+                </div> */}
                 {/* Banner Design */}
               </div>
               <div className="col-lg-9 col-md-8">
@@ -568,7 +565,7 @@ const ShopListCol = () => {
                                         data-bs-html="true"
                                         title="Wishlist"
                                       >
-                                        {/* <i className="bi bi-heart" /> */}
+                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"
@@ -688,7 +685,7 @@ const ShopListCol = () => {
                                         data-bs-html="true"
                                         title="Wishlist"
                                       >
-                                        {/* <i className="bi bi-heart" /> */}
+                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"
@@ -814,7 +811,7 @@ const ShopListCol = () => {
                                         data-bs-html="true"
                                         title="Wishlist"
                                       >
-                                        {/* <i className="bi bi-heart" /> */}
+                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"
@@ -937,7 +934,7 @@ const ShopListCol = () => {
                                         data-bs-html="true"
                                         title="Wishlist"
                                       >
-                                        {/* <i className="bi bi-heart" /> */}
+                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"
@@ -1060,7 +1057,7 @@ const ShopListCol = () => {
                                         data-bs-html="true"
                                         title="Wishlist"
                                       >
-                                        {/* <i className="bi bi-heart" /> */}
+                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"

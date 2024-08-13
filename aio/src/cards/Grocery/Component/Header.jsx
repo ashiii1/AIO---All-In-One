@@ -7,6 +7,7 @@ import productimage3 from '../images/product-img-3.jpg'
 import productimage4 from '../images/product-img-4.jpg'
 import productimage5 from '../images/product-img-5.jpg'
 import { Link } from "react-router-dom";
+import logo from '../ASHI.png'
 
 const Header = () => {
 
@@ -19,217 +20,13 @@ const Header = () => {
 
   return (
     <div>
-      <>
-        <div className="border-bottom pb-5">
-          <div className="bg-light py-1">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-10 col-12 d-flex " style={{ alignItems: 'center' }}>
-                  <span> Super Value Deals - Save more with coupons</span>
-                </div>
-                <div className="col-md-2 col-xxl-1 text-end d-none d-lg-block" style={{ marginLeft: '20px' }}>
-                  <div className="list-inline">
-                    <div className="list-inline-item">
-                      <Link
-                        to="/grocery/ShopWishList"
-                        className="text-muted position-relative"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={20}
-                          height={20}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="feather feather-heart"
-                        >
-                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                          5
-                          <span className="visually-hidden">
-                            unread messages
-                          </span>
-                        </span>
-                      </Link>
-                    </div>
-                    <div className="list-inline-item">
-                      <Link
-                        to="#!"
-                        className="text-muted"
-                        data-bs-toggle="modal"
-                        data-bs-target="#userModal"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={20}
-                          height={20}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="feather feather-user"
-                        >
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                          <circle cx={12} cy={7} r={4} />
-                        </svg>
-                      </Link>
-                    </div>
-                    <div className="list-inline-item">
-                      <Link
-                        className="text-muted position-relative "
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight"
-                        to="#offcanvasExample"
-                        role="button"
-                        aria-controls="offcanvasRight"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={20}
-                          height={20}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="feather feather-shopping-bag"
-                        >
-                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                          <line x1={3} y1={6} x2={21} y2={6} />
-                          <path d="M16 10a4 4 0 0 1-8 0" />
-                        </svg>
-                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                          1
-                          <span className="visually-hidden">
-                            unread messages
-                          </span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
-      <>
-        <div className="container  displaydesign">
-          <div className="row g-4">
-            <div className="col-8 col-sm-4 col-lg-9 py-2 ">
-              <input
-                className="form-control "
-                style={{ width: "100%" }}
-                list="datalistOptions"
-                id="exampleDataList"
-                placeholder="Type to search..."
-              />
-            </div>
-            <div className="col-4 col-sm-4 col-lg-3 py-2 d-flex" style={{ justifyContent: 'center' }}>
-              {/* Button trigger modal */}
-              {/* <button
-            type="button"
-            className="btn btn-primary "
-            data-bs-toggle="modal"
-            data-bs-target="/ShoplocationModal"
-          >
-            <i className="feather-icon icon-map-pin me-2" />
-            Location
-          </button> */}
-              <div className="list-inline">
-                <div className="list-inline-item">
-                  <Link to="/grocery/ShopWishList" className="text-muted position-relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={20}
-                      height={20}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="feather feather-heart"
-                    >
-                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg>
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                      5<span className="visually-hidden">unread messages</span>
-                    </span>
-                  </Link>
-                </div>
-                <div className="list-inline-item">
-                  <Link
-                    to="#!"
-                    className="text-muted"
-                    data-bs-toggle="modal"
-                    data-bs-target="#userModal"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={20}
-                      height={20}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="feather feather-user"
-                    >
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                      <circle cx={12} cy={7} r={4} />
-                    </svg>
-                  </Link>
-                </div>
-                <div className="list-inline-item">
-                  <Link
-                    className="text-muted position-relative "
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight"
-                    to="#offcanvasExample"
-                    role="button"
-                    aria-controls="offcanvasRight"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={20}
-                      height={20}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="feather feather-shopping-bag"
-                    >
-                      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                      <line x1={3} y1={6} x2={21} y2={6} />
-                      <path d="M16 10a4 4 0 0 1-8 0" />
-                    </svg>
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                      1<span className="visually-hidden">unread messages</span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
-      <nav className="navbar navbar-expand-lg navbar-expand-lg navbar-light sticky-top text-3xl">
+   
+      <nav className="navbar text-black h-20 sticky bg-green-200 navbar-expand-lg navbar-expand-lg navbar-light sticky-top text-3xl">
         <div className="container text-3xl">
           <Link className="navbar-brand" to="/grocery/shop">
             <img
-              src={Grocerylogo}
-              style={{ width: 200, marginBottom: 10, marginLeft: "-15px" }}
+              src={logo}
+              style={{ width: 70, marginBottom: 10, marginLeft: "-15px" }}
               alt="eCommerce HTML Template"
             />
           </Link>
@@ -259,13 +56,13 @@ const Header = () => {
             </div>
       </button>
 
-      <div className=" navbar-collapse text-3xl" id="mobile_nv">
+      <div className=" navbar-collapse text-xl" id="mobile_nv">
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right text-3xl"></ul>
-        <ul className="navbar-nav navbar-light text-3xl">
-          <li className="nav-item text-3xl">
-            <li className="nav-item dmenu dropdown text-3xl">
+        <ul className="navbar-nav navbar-light text-xl">
+          <li className="nav-item text-xl">
+            <li className="nav-item dmenu dropdown text-xl">
               <Link
-                className="nav-link dropdown-toggle"
+                className="nav-lin text-xl pb-10 dropdown-toggle hover:text-gray-200"
                 to="/grocery/shop"
                 id="navbarDropdown"
                 role="button"
@@ -322,14 +119,14 @@ const Header = () => {
               </div>
             </li>
           </li>
-          <li className="nav-item">
+          <li className="nav-ite text-black pt-4">
             <Link className="nav-link" to="/grocery">
               Home
             </Link>
           </li>
           <li className="nav-item dmenu dropdown">
             <Link
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle text-black pt-3"
               to="#"
               id="navbarDropdown"
               role="button"
@@ -366,7 +163,7 @@ const Header = () => {
 
           <li className="nav-item dmenu dropdown">
             <Link
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle text-black pt-3"
               to="#"
               id="navbarDropdown"
               role="button"
@@ -397,7 +194,7 @@ const Header = () => {
 
           <li className="nav-item dmenu dropdown">
             <Link
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle text-black pt-3"
               to="#"
               id="navbarDropdown"
               role="button"
@@ -464,153 +261,10 @@ const Header = () => {
                 </div>
               </li> */}
 
-          <li className="nav-item dropdown megamenu-li dmenu">
-            <Link
-              className="nav-link dropdown-toggle"
-              to="/grocery/Shop"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              All Services
-            </Link>
-            <div
-              className="dropdown-menu megamenu sm-menu border-top"
-              aria-labelledby="dropdown01"
-            >
-              <div className="row">
-                <div className="col-sm-6 col-lg-3 border-right mb-4">
-                  <div>
-                    <h6 className="text-primary ps-3">
-                      Dairy, Bread &amp; Eggs
-                    </h6>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Butter
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Milk Drinks
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Curd &amp; Yogurt
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Eggs
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Buns &amp; Bakery
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Cheese
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Condensed Milk
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Dairy Products
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-sm-6 col-lg-3 border-right mb-4">
-                  <div>
-                    <h6 className="text-primary ps-3">
-                      Breakfast &amp; Instant Food
-                    </h6>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Breakfast Cereal
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      {" "}
-                      Noodles, Pasta &amp; Soup
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Frozen Veg Snacks
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      {" "}
-                      Frozen Non-Veg Snacks
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      {" "}
-                      Vermicelli
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      {" "}
-                      Instant Mixes
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      {" "}
-                      Batter
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      {" "}
-                      Fruit and Juices
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-sm-6 col-lg-3 mb-4">
-                  <div>
-                    <h6 className="text-primary ps-3">
-                      Cold Drinks &amp; Juices
-                    </h6>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Soft Drinks
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Fruit Juices
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Coldpress
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Water &amp; Ice Cubes
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Soda &amp; Mixers
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Health Drinks
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Herbal Drinks
-                    </Link>
-                    <Link className="dropdown-item" to="/grocery/Shop">
-                      Milk Drinks
-                    </Link>
-                  </div>
-                </div>
-
-                {/* <div className="row"> */}
-                <div className="col-sm-6 col-lg-3 border-right mb-4">
-                  <div className="card border-0">
-                    <img
-                      src={menubanner}
-                      style={{ width: "90%" }}
-                      alt="eCommerce HTML Template"
-                      className="img-fluid rounded-3"
-                    />
-                    <div className="position-absolute ps-6 mt-8">
-                      <h5 className=" mb-0 ">
-                        Dont miss this <br />
-                        offer today.
-                      </h5>
-                      <Link
-                        to="/Shop"
-                        className="btn btn-primary btn-sm mt-3"
-                      >
-                        Shop Now
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* </div> */}
-            </div>
-          </li>
-
+    
           <li className="nav-item dmenu dropdown">
             <Link
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle text-black pt-3"
               to=""
               id="navbarDropdown"
               role="button"

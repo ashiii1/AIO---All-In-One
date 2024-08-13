@@ -1,0 +1,113 @@
+.featured-category-section,
+.brands-section {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.offers-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+}
+
+.offer-img:hover,
+.category-img:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.offer-img {
+  width: 60rem;
+  height: 30rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.category {
+  width: 40rem;
+  cursor: pointer;
+  height: 35rem;
+  margin: 3rem;
+
+}
+
+.category-img {
+  height: 70%;
+}
+
+.category:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.category-text {
+  width: 30rem;
+  margin: auto;
+  height: 30%;
+  font-size: 2rem;
+  color: var(--primary-text-color);
+  font-weight: 900;
+}
+
+.category-title-text {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.category-text-secondary {
+  font-size: 1.5rem;
+  margin: 0px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.brands-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-img {
+  width: 20rem;
+  height: 15rem;
+  cursor: pointer;
+}
+
+.sub-heading {
+  font-size: 3rem;
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+.mustHave {
+  width: 100%;
+  height: 40rem;
+}
+
+.pinkfriday {
+  width: 100rem;
+  height: 40rem;
+  margin-left: 30rem;
+  /* text-align: center; */
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .offer-img {
+    width: 90%;
+    text-align: center;
+  }
+}

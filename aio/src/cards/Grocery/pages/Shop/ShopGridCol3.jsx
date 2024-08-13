@@ -285,7 +285,7 @@ const ShopGridCol3 = () => {
                   </div>
                 </div>
                 {/* rating */}
-                <div className="py-4 ">
+                <div className="py-4">
                   <h5 className="mb-3">Rating</h5>
                   <div>
                     {/* form check */}
@@ -376,29 +376,7 @@ const ShopGridCol3 = () => {
                     </div>
                   </div>
                 </div>
-                <div className="py-4">
-                  {/* Banner Design */}
-                  {/* Banner Content */}
-                  <div className="position-absolute p-5 py-8">
-                    <h3 className="mb-0">Fresh Fruits </h3>
-                    <p>Get Upto 25% Off</p>
-                    <Link to="#" className="btn btn-dark">
-                      Shop Now
-                      <i className="feather-icon icon-arrow-right ms-1" />
-                    </Link>
-                  </div>
-                  {/* Banner Content */}
-                  {/* Banner Image */}
-                  {/* img */}
-                  <img
-                    src={assortment}
-                    alt="assortment"
-                    className="img-fluid rounded-3"
-                  />
-                  {/* Banner Image */}
                 </div>
-                {/* Banner Design */}
-              </div>
               <div className="col-lg-9 col-md-8">
                 <div>
                   {loaderStatus ? (
@@ -521,7 +499,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -640,7 +618,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -753,7 +731,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -872,7 +850,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -988,7 +966,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1107,7 +1085,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1223,7 +1201,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1336,7 +1314,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1450,7 +1428,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1566,7 +1544,7 @@ const ShopGridCol3 = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"

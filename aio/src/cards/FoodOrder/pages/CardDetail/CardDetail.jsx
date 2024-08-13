@@ -84,7 +84,7 @@ const CardDetail = () => {
         <h2>Similar Items</h2>
         <div className="similar-items-list">
           {similarItems.map(item => (
-            <div key={item._id} className="similar-item" onClick={() => navigate(`/food-order/${item._id}`)}>
+            <div key={item._id} className="similar-item" onClick={() => navigate(`/food-order/food-order/${item._id}`)}>
               <img src={item.image} alt={item.name} />
               <p>{item.name}</p>
             </div>

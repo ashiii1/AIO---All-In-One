@@ -24,9 +24,9 @@ const cardsData = [
 
 const Navbar = () => {
   return (
-    <nav className="bg-green-600 text-white text-xl p-4 shadow-md">
+    <nav className="bg-red-400 text-white  text-xl p-3 shadow-md">
       <ul className="flex justify-around">
-        <li className='bg-green-800 text-bold text-2xl'>ASHI</li>
+        <li className='bg-red-500 font-bold text-2xl'>ASHI</li>
         <li className="hover:text-black"><a href="/books">Books</a></li>
         <li className="hover:text-black"><a href="/furnituree">Furniture</a></li>
         <li className="hover:text-black"><a href="/shopping">Shopping</a></li>
@@ -54,7 +54,7 @@ const BannerSlider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-96 overflow-hidden">
+    <div className="relative w-full h-96 overflow-hidden ">
       {banners.map((banner, index) => (
         <img
           key={index}
@@ -71,23 +71,23 @@ const BannerSlider = () => {
 const CardsMain = () => {
   return (
     <div className="p-8 bg-gray-100">
-      <h2 className="text-center text-2xl font-bold mb-8 text-green-600">Featured Categories</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <h2 className="text-center text-4xl pb-3 font-bold mb-8 text-black">Featured Categories</h2>
+      <div className="grid grid-cols-1 p-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="bg-white text-black rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+            className="bg-white  text-black rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
             onClick={() => window.location.href = card.link}
           >
             <img
               className="w-full"
               src={card.imageSrc}
               alt={card.title}
-              style={{ height: '200px', objectFit: 'cover' }}
+              style={{ height: '250px', objectFit: 'cover' }}
             />
             <div className="p-4">
               <h3 className="text-lg font-semibold">{card.title}</h3>
-              <p className="text-gray-400">{card.description}</p>
+              <p className="text-gray-600">{card.description}</p>
             </div>
           </div>
         ))}

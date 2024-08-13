@@ -1,7 +1,6 @@
 
 import React from "react";
 // css
-import "./Grocery.css";
 // browserrouter 
 import {  Route, Routes } from "react-router-dom";
 // Components
@@ -46,7 +45,6 @@ const GroceryApp = () => {
     return (
     <div>
       
-        <MainHeader/>
         <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -78,7 +76,6 @@ const GroceryApp = () => {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
-        <Footer/>
     
     </div>
   );

@@ -36,7 +36,7 @@ const BlogCategory = () => {
               wrapperStyle={{}}
               wrapperclassName="magnifying-glass-wrapper"
               glassColor="#c0efff"
-              color="#0aad0a"
+              color="#000000"
             />
           </div>
         ) : (

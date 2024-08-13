@@ -295,7 +295,7 @@ const Product = ({ products }) => {
                     <div className="flex flex-row flex-wrap gap-2">
                       <button
                         id="addtocart"
-                        className="w-60 justify-center text-2xl flex flex-row p-2 rounded-md bg-purple-900 text-white border-2 border-purple-700 hover:text-slate-900 hover:bg-rose-800 active:bg-green-900 active:mt-1 active:ml-1"
+                        className="w-60 justify-center text-2xl flex flex-row p-2 rounded-md bg-black text-white border-2 border-purple-700 hover:text-slate-900 hover:bg-rose-800 active:bg-green-900 active:mt-1 active:ml-1"
                         type="button"
                         onClick={() => {
                           // console.log(item);

@@ -326,7 +326,7 @@ const SingleShop = () => {
                               E-Grocery Super Market
                             </h5>
                             <p className="mb-0 text-muted">
-                              Whatever the occasion, we have got you covered.
+                              Whatever the occasion, weve got you covered.
                             </p>
                           </div>
                           <div className="position-relative">
@@ -441,7 +441,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -556,7 +556,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -667,7 +667,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -781,7 +781,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -895,7 +895,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1011,7 +1011,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1126,7 +1126,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1237,7 +1237,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1349,7 +1349,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1463,7 +1463,7 @@ const SingleShop = () => {
                                     data-bs-html="true"
                                     title="Wishlist"
                                   >
-                                    {/* <i className="bi bi-heart" /> */}
+                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"

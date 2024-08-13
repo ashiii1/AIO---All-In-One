@@ -1,0 +1,94 @@
+.searchbar-container {
+  width: 40rem;
+  height: 3.5rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin: 0px;
+  position: relative;
+}
+
+.fa-search {
+  font-size: 2rem;
+  padding: 5px;
+  color: var(--secondary-bg-color);
+}
+
+.search-input {
+  background-color: white;
+}
+
+.searchResults-container {
+  width: 39rem;
+  height: fit-content;
+  max-height: 40rem;
+  height: fit-content;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 5px;
+  background-color: var(--white);
+  z-index: 7;
+}
+
+.searchItem {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.searchItem:hover {
+  background-color: var(--primary-bg-color);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-bg-color);
+}
+
+.search-close-icon {
+  position: absolute;
+  right: 0px;
+  margin: 6px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.searchbar-container-mb {
+  width: 100%;
+  height: 4.5rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  outline: none;
+  border: none;
+  position: relative;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .searchbar-container {
+    display: none;
+  }
+
+  .searchResults-container {
+    z-index: 7;
+    background-color: var(--white);
+  }
+}

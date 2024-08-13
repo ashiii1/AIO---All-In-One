@@ -15,7 +15,7 @@ const Categories = ({ categories, products }) => {
             <div className="flex justify-center items-center text-slate-600">
               <h2 className="text-3xl p-2">{category.toUpperCase()} ➡️</h2>
               <div className="">
-                <Link to={`/categories/${category}`}>
+                <Link to={`/shopping/categories/${category}`}>
                   <p className=" text-2xl p-2 underline">All products</p>
                 </Link>
               </div>
@@ -66,50 +66,3 @@ const Categories = ({ categories, products }) => {
 };
 
 export default Categories;
-
-/* Categories.defaultProps = {
-  categories: [
-    "smartphones",
-    "laptops",
-    "fragrances",
-    "skincare",
-    "groceries",
-    "home-decoration",
-    "furniture",
-    "tops",
-    "womens-dresses",
-    "womens-shoes",
-    "mens-shirts",
-    "mens-shoes",
-    "mens-watches",
-    "womens-watches",
-    "womens-bags",
-    "womens-jewellery",
-    "sunglasses",
-    "automotive",
-    "motorcycle",
-    "lighting",
-  ]
-} */
-
-/*   const [smartphones, setSmartphones] = useState([]);
-  const [laptops, setLaptops] = useState([]);
-  const [fragrances, setFragrances] = useState([]);
-  const [skincare, setSkincare] = useState([]);
-  const [groceries, setGroceries] = useState([]);
-  const [homeDecoration, setHomeDecoration] = useState([]);
-  const [furniture, setFurniture] = useState([]);
-  const [tops, setTops] = useState([]);
-  const [womensDresses, setWomensDresses] = useState([]);
-  const [womensShoes, setWomensShoes] = useState([]);
-  const [mensShirts, setMensShirts] = useState([]);
-  const [mensShoes, setMensShoes] = useState([]);
-  const [mensWatches, setMensWatches] = useState([]);
-  const [womensWatches, setWomensWatches] = useState([]);
-  const [womensBags, setWomensBags] = useState([]);
-  const [womensJewellery, setWomensJewellery] = useState([]);
-  const [sunglasses, setsunglasses] = useState([]);
-  const [automotive, setAutomotive] = useState([]);
-  const [motorcycle, setMotorcycle] = useState([]);
-  const [lighting, setLighting] = useState([]);
- */

@@ -20,7 +20,7 @@ const ProductItem = () => {
           <div className="row">
             <div className="col-12 mb-6">
             <div className="section-head text-center mt-8" >
-              <h3 className='h3style ' data-title="Popular Products">Popular Products</h3>
+              <h3 className='h3style text-3xl font-bold pt-5 ' data-title="Popular Products">Popular Products</h3>
               <div className="wt-separator bg-primarys">
               </div>
               <div className="wt-separator2 bg-primarys">
@@ -541,6 +541,601 @@ const ProductItem = () => {
                 </div>
               </div>
             </div>
+
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product5}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Instant Food</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Salted Instant Popcorn{" "}
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-half" />
+                    </small>{" "}
+                    <span className="text-muted small">4.5 (39)</span>
+                  </div>
+                  <div className="d-flex justify-content-between mt-4">
+                    <div>
+                      <span className="text-dark">$13</span>{" "}
+                      <span className="text-decoration-line-through text-muted">
+                        $18
+                      </span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product7}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Dairy, Bread &amp; Eggs</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Britannia Cheese Slices
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                    </small>{" "}
+                    <span className="text-muted small">5 (345)</span>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                      <span className="text-dark">$24</span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product5}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Instant Food</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Salted Instant Popcorn{" "}
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-half" />
+                    </small>{" "}
+                    <span className="text-muted small">4.5 (39)</span>
+                  </div>
+                  <div className="d-flex justify-content-between mt-4">
+                    <div>
+                      <span className="text-dark">$13</span>{" "}
+                      <span className="text-decoration-line-through text-muted">
+                        $18
+                      </span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product7}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Dairy, Bread &amp; Eggs</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Britannia Cheese Slices
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                    </small>{" "}
+                    <span className="text-muted small">5 (345)</span>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                      <span className="text-dark">$24</span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product7}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Dairy, Bread &amp; Eggs</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Britannia Cheese Slices
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                    </small>{" "}
+                    <span className="text-muted small">5 (345)</span>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                      <span className="text-dark">$24</span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product7}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Dairy, Bread &amp; Eggs</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Britannia Cheese Slices
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                    </small>{" "}
+                    <span className="text-muted small">5 (345)</span>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                      <span className="text-dark">$24</span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="col fade-zoom">
               <div className="card card-product">
                 <div className="card-body">
@@ -620,6 +1215,402 @@ const ProductItem = () => {
                       <span className="text-decoration-line-through text-muted">
                         $24
                       </span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product7}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Dairy, Bread &amp; Eggs</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Britannia Cheese Slices
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                    </small>{" "}
+                    <span className="text-muted small">5 (345)</span>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                      <span className="text-dark">$24</span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product7}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Dairy, Bread &amp; Eggs</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Britannia Cheese Slices
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                    </small>{" "}
+                    <span className="text-muted small">5 (345)</span>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                      <span className="text-dark">$24</span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product5}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Instant Food</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Salted Instant Popcorn{" "}
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-half" />
+                    </small>{" "}
+                    <span className="text-muted small">4.5 (39)</span>
+                  </div>
+                  <div className="d-flex justify-content-between mt-4">
+                    <div>
+                      <span className="text-dark">$13</span>{" "}
+                      <span className="text-decoration-line-through text-muted">
+                        $18
+                      </span>
+                    </div>
+                    <div>
+                      <Link href="#!" className="btn btn-primary btn-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="feather feather-plus"
+                        >
+                          <line x1={12} y1={5} x2={12} y2={19} />
+                          <line x1={5} y1={12} x2={19} y2={12} />
+                        </svg>{" "}
+                        Add
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col fade-zoom">
+              <div className="card card-product">
+                <div className="card-body">
+                  <div className="text-center position-relative">
+                    {" "}
+                    <Link href="#!">
+                      <img
+                        src={product7}
+                        alt="Grocery Ecommerce Template"
+                        className="mb-3 img-fluid"
+                      />
+                    </Link>
+                    <div className="card-product-action">
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quickViewModal"
+                      >
+                        <i
+                          className="bi bi-eye"
+                          data-bs-toggle="tooltip"
+                          data-bs-html="true"
+                          title="Quick View"
+                        />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Wishlist"
+                      >
+                        {/* <i className="bi bi-heart" /> */}
+                      </Link>
+                      <Link
+                        href="#!"
+                        className="btn-action"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="Compare"
+                      >
+                        <i className="bi bi-arrow-left-right" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-small mb-1">
+                    <Link href="#!" className="text-decoration-none text-muted">
+                      <small>Dairy, Bread &amp; Eggs</small>
+                    </Link>
+                  </div>
+                  <h2 className="fs-6">
+                    <Link
+                      href="#!"
+                      className="text-inherit text-decoration-none"
+                    >
+                      Britannia Cheese Slices
+                    </Link>
+                  </h2>
+                  <div className="text-warning">
+                    <small>
+                      {" "}
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                      <i className="bi bi-star-fill" />
+                    </small>{" "}
+                    <span className="text-muted small">5 (345)</span>
+                  </div>
+                  <div className="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                      <span className="text-dark">$24</span>
                     </div>
                     <div>
                       <Link href="#!" className="btn btn-primary btn-sm">

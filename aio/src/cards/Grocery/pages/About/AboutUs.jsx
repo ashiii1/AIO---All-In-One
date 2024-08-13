@@ -51,7 +51,7 @@ const AboutUs = () => {
               wrapperStyle={{}}
               wrapperclassName="magnifying-glass-wrapper"
               glassColor="#c0efff"
-              color="#0aad0a"
+              color="#000000"
             />
           </div>
         ) : (
@@ -80,7 +80,7 @@ const AboutUs = () => {
 
                       {/* Text */}
                       <Slide direction="down">
-                      <h1 className="pb-2 pb-md-3">About Fresh Cart</h1>
+                      <h1 className="pb-2 pb-md-3">About Us</h1>
                       <h3 className="pb-2 pb-md-3">The Future of Grocery Delivery:</h3>
                       <p
                         className="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3"
@@ -163,79 +163,7 @@ const AboutUs = () => {
             </>
 
             <>
-              <section className="container mt-8 mb-5 pt-lg-5" id="benefits">
-                <Swiper
-                  className="swiper pt-3"
-                  modules={[]} // Use the modules prop to include the Pagination module
-                  slidesPerView={1}
-                  pagination={{ clickable: true }}
-                  breakpoints={{
-                    500: { slidesPerView: 2 },
-                    991: { slidesPerView: 3 },
-                  }}
-                >
-                  <div className="swiper-wrapper pt-4">
-                    <SwiperSlide className="swiper-slide border-end-lg px-2">
-                      <div className="text-center">
-                        <Zoom>
-                        <img
-                          src={idea}
-                          width="100"
-                          alt="Bulb icon"
-                          className="d-block mb-4 mx-auto"
-                        />
-                        </Zoom>
-                        <Slide direction="up">
-                        <h4 className="mb-2 pb-1">Creative Solutions</h4>
-                        <p className="mx-auto" style={{ maxWidth: "336px" }}>
-                          Sed morbi nulla pulvinar lectus tempor vel euismod
-                          accumsan.
-                        </p>
-                        </Slide>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide border-end-lg px-2">
-                      <div className="text-center">
-                        <Zoom>
-                        <img
-                          src={award}
-                          width="100"
-                          alt="Award icon"
-                          className="d-block mb-4 mx-auto"
-                        />
-                        </Zoom>
-                        <Slide direction="up">
-                        <h4 className="mb-2 pb-1">Award Winning</h4>
-                        <p className="mx-auto" style={{ maxWidth: "336px" }}>
-                          Sit facilisis dolor arcu, fermentum vestibulum arcu
-                          elementum imperdiet.
-                        </p>
-                        </Slide>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide px-2">
-                      <div className="text-center">
-                        <Zoom>
-                        <img
-                          src={team}
-                          width="100"
-                          alt="Team icon"
-                          className="d-block mb-4 mx-auto"
-                        />
-                        </Zoom>
-                        <Slide direction="up">
-                        <h4 className="mb-2 pb-1">Team of Professionals</h4>
-                        <p className="mx-auto" style={{ maxWidth: "336px" }}>
-                          Nam venenatis urna aenean quis feugiat et senectus
-                          turpis.
-                        </p>
-                        </Slide>
-                      </div>
-                    </SwiperSlide>
-                  </div>
-                  <div className="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
-                </Swiper>
-              </section>
+             
             </>
 
             <>
@@ -275,7 +203,7 @@ const AboutUs = () => {
                 >
                   <div className="col-md-5">
                     <a
-                      href="https://www.youtube.com/watch?v=zPo5ZaH6sW8"
+                      href=""
                       className="gallery-item video-item is-hovered rounded-3"
                       data-sub-html='<h6 class="fs-sm text-light">Silicon Inc. Showreel by Marvin McKinney</h6>'
                     >
@@ -343,13 +271,13 @@ const AboutUs = () => {
             </>
             <>
               {/* Awards */}
-              <section className="container mt-8 mb-5 pb-3 pb-md-4 pb-lg-5">
+              <section className="container mt-8 pb-5">
                 <div className="row gy-4 py-xl-2">
                   <div className="col-md-4">
                     {/* <h2 className="mb-0 text-md-start text-center">Our Partners</h2> */}
                     <div className="info-whydiff">
                       <div className="section-title-left pt-80">
-                        <h3 className="party" style={{ fontSize: "38px" }}>
+                        <h3 className="party pb-5" style={{ fontSize: "38px" }}>
                           <Slide direction="down" delay={0.5}>
                           Our Partners
                           </Slide>
@@ -357,9 +285,9 @@ const AboutUs = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-7 offset-lg-1 col-md-8">
-                    <div className="row row-cols-sm-4 row-cols-2 gy-4">
-                      <div className="col">
+                  <div className="col-lg-7 offset-lg-1 col-md-8 pt-24">
+                    <div className="row row-cols-sm-4 row-cols-2 gy-4 pt-5">
+                      <div className="">
                         <div className="position-relative text-center">
                           <Zoom>
                           <img
@@ -438,9 +366,6 @@ const AboutUs = () => {
               </section>
             </>
 
-            <>
-              <CaseStudySlider />
-            </>
             <>
               {/* Contact form */}
               <section className="container pb-5 mb-2 mt-8 mb-md-4 mb-lg-5">
@@ -544,7 +469,6 @@ const AboutUs = () => {
             </>
 
             <>
-              <SocialNetworksCarousel />
             </>
           </>
         )}

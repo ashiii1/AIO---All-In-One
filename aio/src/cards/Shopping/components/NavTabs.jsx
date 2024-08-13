@@ -34,11 +34,11 @@ function NavTabs({ search, setSearch }) {
 
 
   return (
-    <nav className="fixed top-0 w-full flex flex-col justify-evenly p-2  md:flex-row   h-[auto] z-10 bg-green-600">
+    <nav className="fixed top-0 w-full flex flex-col justify-evenly p-2  md:flex-row   h-[auto] z-10 bg-red-400">
      <div className="flex mx-auto p-3 items-center justify-evenly">
       <div className="sm:mx-[-110px]" >
         <Link to="/shopping">
-        <h1 className=" text-4xl text-white lg:text-4xl md:text-3xl px-5 ">ShopAddict</h1>
+        <h1 className=" text-4xl text-white lg:text-4xl md:text-3xl px-5 font-bold">AIO</h1>
         </Link>
       </div>
       <div className="fixed left-7 md:hidden text-white w-[80px]" onClick={() => setMenu(!menu)}>

@@ -13,7 +13,7 @@
     min-width: fit-content;
     list-style: none;
     gap: 20px;
-    color: #49557e;
+    color: #ffffff;
     font-size: 18px;
 }
 .navf-right{
@@ -26,7 +26,7 @@
 .navbarf button{
     background: transparent;
     font-size: 16px;
-    color: #49557e;
+    color: #ffffff;
     border: 1px solid tomato;
     padding: 10px 30px;
     border-radius: 50px;
@@ -38,7 +38,7 @@
 }
 .navbarf .active{
     padding-bottom: 2px ;
-    border-bottom: 2px solid #49557e;
+    border-bottom: 2px solid #fcfdff;
 }
 .navbarf li{
     cursor: pointer;

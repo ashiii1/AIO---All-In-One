@@ -22,11 +22,11 @@ const ProductPreviewView = ({ productDetail, route }) => {
   return (
     <CustomContainer
       key={id}
-      className="flex my-12 justify-between max-w-[88%] lg:max-w-sm xs:max-w-full xs:w-full xs:mx-0 sm:max-w-sm font-primary"
+      className="my-22 justify-between xs:mx-10 font-primary"
     >
       {/* {console.log("in cart", productsDetail.inCart)} */}
-      <div className="flex mx-auto items-center xs:items-stretch gap-12 lg:flex-col md:pb-8">
-        <div className=" flex flex-col items-stretch xl:shrink-0 max-w-[26rem]">
+      <div className="mx-auto items-center xs:items-stretch  lg:flex-col md:pb-28">
+        <div className=" flex flex-col items-stretch xl:shrink-0 max-w-[96rem]">
           <NavLink to={route} className="w-max p-0">
             <IconArrow className="rotate-180" />
           </NavLink>
@@ -71,7 +71,7 @@ const ProductPreviewView = ({ productDetail, route }) => {
                 alt={name}
                 className="rounded-sm z-10 object-cover block w-full max-w-full h-72 xs:h-[16rem]"
               />
-              <div className="flex justify-between mt-2 gap-1 overflow-x-scroll">
+              <div className="flex justify-between mt-12 gap-2 overflow-x-scroll">
                 {imageVariants.map((el, i) => {
                   return (
                     <img

@@ -36,7 +36,7 @@ const Blog = () => {
               wrapperStyle={{}}
               wrapperclassName="magnifying-glass-wrapper"
               glassColor="#c0efff"
-              color="#0aad0a"
+              color="#000000"
             />
           </div>
         ) : (
@@ -47,18 +47,18 @@ const Blog = () => {
             <>
               <div>
                 {/* section */}
-                <section className="mt-8">
+                <section className="mt-8 ">
                   <div className="container">
                     <div className="row">
                       {/* logo */}
                       <div className="col-12">
-                        <h1 className="fw-bold">FreshCart Blog</h1>
+                        <h1 className="fw-bold text-center text-3xl"> Blog</h1>
                       </div>
                     </div>
                   </div>
                 </section>
                 {/* section */}
-                <section className="mt-6 mb-lg-14 mb-8">
+                <section className="mt-6 mb-lg-14 mb-8 ">
                   {/* container */}
                   <div className="container">
                     <div className="row d-flex align-items-center mb-8">
@@ -69,7 +69,7 @@ const Blog = () => {
                           <Fade>
                           <div className="img-zoom">
                             <img
-                              src={bloglarge}
+                              src={blog5}
                               alt="blog"
                               className="img-fluid rounded-3 w-100"
                             />
@@ -110,7 +110,7 @@ const Blog = () => {
                       </div>
                     </div>
                     {/* row */}
-                    <div className="row">
+                    <div className="row pt-16">
                       
                       <div className="col-12 col-md-6 col-lg-4 mb-8">
                       <Zoom>
@@ -339,7 +339,7 @@ const Blog = () => {
                             {/* img */}
                             <div className="img-zoom">
                               <img
-                                src={blog5}
+                                src={bloglarge}
                                 alt="blog"
                                 className="img-fluid rounded-3 w-100"
                               />

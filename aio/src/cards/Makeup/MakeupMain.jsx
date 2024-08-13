@@ -18,12 +18,28 @@
 
 // export default MakeupMain
 
-import React from 'react'
+import MakeUpApp from './MakeUpApp'
 
+    import React from "react";
+  
+    import Context from "./Context";
+    import AuthProvider from "./AuthProvider";
+    
+    // Call make Server
+   
+    
 const MakeupMain = () => {
   return (
-    <div>MakeupMain</div>
-  )
-}
+      <AuthProvider>
+        <Context>
+            <React.StrictMode>
+              <MakeUpApp />
+            </React.StrictMode>
+        </Context>
+      </AuthProvider>
+      
+  )}
+    
+ 
 
 export default MakeupMain

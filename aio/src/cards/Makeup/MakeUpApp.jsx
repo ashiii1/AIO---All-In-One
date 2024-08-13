@@ -1,49 +1,57 @@
-import  Home  from './pages/Home';
-import ProductList from './pages/ProductList';
-import Product from './pages/Product';
-import Cart from './pages/Cart';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ResetPassword from './pages/ResetPassword';
-import ForgetPassword from './pages/ForgetPassword';
-import Success from './pages/Success';
-import {Route,Routes } from "react-router-dom"
-import { useSelector } from 'react-redux';
-import Order from './pages/Order';
-
-const MakeUpApp = () => {
-
- const user=useSelector(state=>state.user.currentUser)
-
-
-  return (
-    <>
-    <Routes>
-      {/* USER Routes  */}
-      <Route exact path="/" ><Home/></Route>
-      <Route  path="/products/:category/:item" ><ProductList/></Route>
-      <Route exact  path="/products" ><ProductList/></Route>
-      <Route exact path="/product/:productId" ><Product/></Route>
-      <Route exact  path="/cart" ><Cart/></Route>
-      <Route exact  path="/order" >
-      {user ? <Order/> :  
+import React from 'react'
+  import { Route, Routes } from "react-router-dom";
+  import { useContext, useEffect } from "react";
+  import { TopBar } from "./components/index.js";
+  import { Header } from './components/index.js';
+  import { StateContext } from "./Context";
+  import { HomePage, ProductListingPage, Signin, Signup, CartPage, WishlistPage, SingleProductPage, UserProfile, Checkout } from './pages/index.js'
+  import { setInitialUseraddress } from "./Services/addressService";
+  
+  const MakeUpApp = () => {
+    const { state, dispatch } = useContext(StateContext)
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const res = await fetch('/api/products', { method: "GET" })
+          const data = await res.json()
+          dispatch({ type: 'SET_PRODUCTS', payload: data.products })
+        } catch (e) {
+          console.log(e)
+        }
+      }
+      fetchData();
+    }, [])
+  
+    useEffect(() => {
+      setInitialUseraddress(state, dispatch)
+    }, [])
+  
+    return (
       <>
-      <Login/>
-      </> }
-        </Route>
-      <Route path="/success"><Success /></Route>
-      <Route exact  path="/login" ><Login/></Route>
-      <Route exact  path="/register" ><Register/></Route>
-      <Route exact  path="/forget" ><ForgetPassword/></Route>
-      <Route exact  path="/resetPassword/:id/:token" ><ResetPassword/></Route>
-
-     
-
-    </Routes>
-    </>
-  );
-}
-
-
+        <TopBar />
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/productlistingpage" element={<ProductListingPage />} />
+          <Route exact path="/signin" element={<Signin />} />
+          <Route exact path="/cartpage" element={<CartPage />} />
+          <Route exact path="/wishlistpage" element={<WishlistPage />} />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/product/:productId" element={<SingleProductPage />} />
+          <Route exact path="/user_profile" element={<UserProfile />} />
+          <Route exact path="/checkout" element={<Checkout />} />
+          <Route
+            path="*"
+            element={
+              <>
+                <h1>No page found</h1>
+              </>
+            }
+          />
+        </Routes>
+      </>
+    );
+  }
+  
 
 export default MakeUpApp

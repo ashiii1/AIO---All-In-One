@@ -17,7 +17,7 @@ const Scroll = () => {
  return(
   <>
     <animated.div style={{ opacity: scrollYProgress }}>
-       <ArrowUpIcon onClick={scrollToTop} className='fixed bottom-5 right-5 bg-purple-900 text-white rounded-full text-bold p-1 w-10' />
+       <ArrowUpIcon onClick={scrollToTop} className='fixed bottom-5 right-5 bg-red-400 text-white rounded-full text-bold p-1 w-10' />
     </animated.div>
   </>
  )

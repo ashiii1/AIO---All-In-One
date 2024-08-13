@@ -4,8 +4,8 @@ import {FaFacebookSquare, FaLinkedin, FaInstagramSquare, FaTwitter, FaTiktok} fr
 const Footer = () => {
   const today = new Date();
   return (
-    <footer className="Footer text-center bg-purple-700 text-light container-fluid  py-3 ">
-      <div className="text-center flex md:flex-row justify-between flex-col-reverse bg-purple-600 text-light container-fluid pt-3 items-center ">
+    <footer className="Footer text-center bg-white text-light container-fluid  py-3 ">
+      <div className="text-center flex md:flex-row justify-between flex-col-reverse bg-black text-light container-fluid pt-3 items-center ">
       <h3 className="text-1xl">Copyright &copy; {today.getFullYear()}</h3>
        {/* Social Icons */}
       <div className="socialLinks md:mr-7">

@@ -1,0 +1,126 @@
+.cart-page-container {
+  margin: 10rem;
+  display: grid;
+  grid-template-areas: "cart-item-display  cart-summary-container";
+  grid-template-columns: 1fr 1fr;
+}
+
+.cart-page-container .cart-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.cart-items-display {
+  grid-area: cart-item-display;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.cart-summary-container {
+  grid-area: cart-summary-container;
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 5px;
+  height: 40rem;
+  background-color: var(--gray);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.price-wrapper {
+  justify-content: space-between;
+}
+.card-icon-minus-disabled {
+  background-color: var(--primary-text-color);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.5rem;
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1094px) {
+  html {
+    font-size: 50%;
+  }
+
+  .cart-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-hz {
+    height: 25rem;
+    width: 15rem;
+    margin: 5px;
+  }
+
+  .cart-card {
+    width: 550px;
+  }
+
+  .card__title {
+    font-size: 2rem;
+  }
+
+  .card__description {
+    font-size: 1.5rem;
+  }
+
+  .card__btn-primary,
+  .card__btn-secondary {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .cart-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-hz {
+    height: 25rem;
+    width: 15rem;
+    margin: 5px;
+  }
+
+  .cart-card {
+    width: 350px;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .card__description {
+    font-size: 1rem;
+  }
+
+  .card__btn-primary,
+  .card__btn-secondary {
+    font-size: 1rem;
+  }
+  .cart-summary-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .price-wrapper {
+    width: 100%;
+  }
+  .btn-secondary.checkout-btn {
+    width: 20rem;
+  }
+}

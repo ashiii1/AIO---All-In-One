@@ -1,9 +1,6 @@
 import slider1 from "../images/slide-1.jpg";
-import abouticon from "../images/about-icons-1.svg";
 import slider2 from "../images/slider-2.jpg";
-import adbanner1 from "../images/ad-banner-1.jpg";
-import adbanner2 from "../images/ad-banner-2.jpg";
-import adbanner3 from "../images/ad-banner-3.jpg";
+
 import attaricedal from "../images/atta-rice-dal.png";
 import petcare from "../images/pet-care.png";
 import cleaningessentials from "../images/cleaning-essentials.png";
@@ -19,9 +16,7 @@ import dairybreadeggs from "../images/dairy-bread-eggs.png";
 import grocerybanner from "../images/grocery-banner.png";
 import grocerybanner2 from "../images/grocery-banner-2.jpg";
 import map from "../images/map.png";
-import iphone from "../images/iphone-2.png";
-import googleplay from "../images/googleplay-btn.svg";
-import appstore from "../images/appstore-btn.svg";
+
 import bannerdeal from "../images/banner-deal1.jpg";
 import product11 from "../images/product-img-11.jpg";
 import product12 from "../images/product-img-12.jpg";
@@ -216,8 +211,8 @@ const Home = () => {
               ariaLabel="magnifying-glass-loading"
               wrapperStyle={{}}
               wrapperclassName="magnifying-glass-wrapper"
-              glassColor="#c0efff"
-              color="#0aad0a"
+              glassColor="#ffffff"
+              color="#000000"
             />
           </div>
         ) : (
@@ -231,8 +226,8 @@ const Home = () => {
                   ↑
                 </button>
               </div>
-              <section className="hero-section">
-                <div className="container mt-5">
+              <section className="hero-section top-2">
+                <div className="container mt-15">
                   <div
                     // id="carouselExampleFade"
                     className="carousel slide carousel-fade w-full"
@@ -261,7 +256,7 @@ const Home = () => {
                               and convenient home delivery.
                             </p>
                             <Link to="/grocery/shop" className="btn btn-dark mt-2">
-                            <div className="w-56 text-center text-3xl">
+                            <div className="w-56 text-center text-3xl pt-20">
                               Shop Now{" "}
                               </div>
                               <i className="feather-icon icon-arrow-right ms-1" />
@@ -300,7 +295,7 @@ const Home = () => {
                     </div>
                     <Link
                       className="carousel-control-prev"
-                      to="/grocery/shop/"
+                      to=""
                       role="button"
                       data-bs-slide="prev"
                     >
@@ -312,7 +307,7 @@ const Home = () => {
                     </Link>
                     <Link
                       className="carousel-control-next"
-                      to="/grocery/shop"
+                      to=""
                       role="button"
                       data-bs-slide="next"
                     >
@@ -367,108 +362,7 @@ const Home = () => {
             </>
             <>
               {/* section */}
-              <section className="mt-8  pt-24">
-                <div className="container">
-                  {/* row */}
-                  <div className="row">
-                    <div className="col-lg-4 col-md-6 col-12 fade-in-left">
-                      <Slide direction="left">
-                        <div className=" banner mb-3">
-                          {/* Banner Content */}
-                          <div className="position-relative">
-                            {/* Banner Image */}
-                            <img
-                              src={adbanner1}
-                              alt="ad-banner"
-                              className="img-fluid rounded-3 w-100"
-                            />
-                            <div className="banner-text">
-                              <h3 className="mb-0 fw-bold">
-                                10% cashback on <br />
-                                personal care{" "}
-                              </h3>
-                              <div className="mt-4 mb-5 fs-5">
-                                <p className="mb-0">Max cashback: $12</p>
-                                <span>
-                                  Code:{" "}
-                                  <span className="fw-bold text-dark">
-                                    CARE12
-                                  </span>
-                                </span>
-                              </div>
-                              <Link to="/grocery/maxcashback" className="btn btn-dark">
-                                Shop Now
-                              </Link>
-                            </div>
-                            {/* Banner Content */}
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6  col-12 slide-in-top">
-                      <Zoom>
-                        <div className="banner mb-3 ">
-                          {/* Banner Content */}
-                          <div className="position-relative">
-                            {/* Banner Image */}
-                            <img
-                              src={adbanner2}
-                              alt="ad-banner-2"
-                              className="img-fluid rounded-3 w-100"
-                            />
-                            <div className="banner-text">
-                              {/* Banner Content */}
-                              <h3 className=" fw-bold mb-2">
-                                Say yes to <br />
-                                season’s fresh{" "}
-                              </h3>
-                              <p className="fs-5">
-                                Refresh your day <br />
-                                the fruity way
-                              </p>
-                              <Link to="/grocery/shop" className="btn btn-dark mt-2">
-                                Shop Now
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </Zoom>
-                    </div>
-                    <div className="col-lg-4 col-12 fade-in-left ">
-                      <Slide direction="right">
-                        <div className="banner mb-3">
-                          <div className="banner-img">
-                            {/* Banner Image */}
-                            <img
-                              src={adbanner3}
-                              alt="ad-banner-3"
-                              className="img-fluid rounded-3 w-100"
-                            />
-                            {/* Banner Content */}
-                            <div className="banner-text">
-                              <h3 className="fs-2 fw-bold lh-1 mb-2">
-                                When in doubt,
-                                <br />
-                                eat ice cream{" "}
-                              </h3>
-                              <p className="fs-5">
-                                Enjoy a scoop of
-                                <br />
-                                summer today
-                              </p>
-                              <Link to="/grocery/shop" className="btn btn-dark">
-                                Shop Now
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              {/* section */}
+             
             </>
             <>
               {/* section category */}
@@ -480,7 +374,7 @@ const Home = () => {
                         {/* heading    */}
                         <div className="section-head text-center mt-8">
                           <h3
-                            className="h3style"
+                            className="h3style text-3xl pt-5 font-bold pb-2"
                             data-title="Shop Popular Categories"
                           >
                             Shop Popular Categories
@@ -497,7 +391,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={dairybreadeggs}
                                 alt="dairy-bread-eggs"
@@ -508,7 +402,7 @@ const Home = () => {
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Dairy, Bread &amp; Eggs
                                 </Link>
                               </h5>
@@ -521,7 +415,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={fruitsvegetables}
                                 alt="fruits-vegetables"
@@ -532,7 +426,7 @@ const Home = () => {
                               {/* text */}
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Fruits &amp; Vegetables
                                 </Link>
                               </h5>
@@ -545,7 +439,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={snackmunchies}
                                 alt="snack-munchies"
@@ -556,7 +450,7 @@ const Home = () => {
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Snack &amp; Munchies
                                 </Link>
                               </h5>
@@ -569,7 +463,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={bakerybiscuits}
                                 alt="bakery-biscuits"
@@ -580,7 +474,7 @@ const Home = () => {
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Bakery &amp; Biscuits
                                 </Link>
                               </h5>
@@ -593,7 +487,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={instantfood}
                                 alt="instant-food"
@@ -604,7 +498,7 @@ const Home = () => {
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Instant Food
                                 </Link>
                               </h5>
@@ -617,7 +511,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={teacoffeedrinks}
                                 alt="tea-coffee-drinks"
@@ -627,7 +521,7 @@ const Home = () => {
                             {/* text */}
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Tea, Coffee &amp; Drinks
                                 </Link>
                               </h5>
@@ -640,7 +534,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={colddrinksjuices}
                                 alt="cold-drinks-juices"
@@ -650,7 +544,7 @@ const Home = () => {
                             {/* text */}
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Cold Drinks &amp; Juices
                                 </Link>
                               </h5>
@@ -663,7 +557,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={chickenmeatfish}
                                 alt="chicken-meat-fish"
@@ -673,7 +567,7 @@ const Home = () => {
                             {/* text */}
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Chicken, Meat &amp; Fish
                                 </Link>
                               </h5>
@@ -687,7 +581,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={babycare}
                                 alt="baby-care"
@@ -698,7 +592,7 @@ const Home = () => {
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Baby Care
                                 </Link>
                               </h5>
@@ -711,7 +605,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={cleaningessentials}
                                 alt="cleaning-essentials"
@@ -722,7 +616,7 @@ const Home = () => {
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Cleaning Essentials
                                 </Link>
                               </h5>
@@ -735,7 +629,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={petcare}
                                 alt="pet-care"
@@ -746,7 +640,7 @@ const Home = () => {
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
                                 {" "}
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Pet Care
                                 </Link>
                               </h5>
@@ -759,7 +653,7 @@ const Home = () => {
                         <Zoom>
                           <div className="text-center mb-10">
                             {/* img */}
-                            <Link to="#">
+                            <Link to="/grocery/shop">
                               <img
                                 src={attaricedal}
                                 alt="atta-rice-dal"
@@ -769,7 +663,7 @@ const Home = () => {
                             {/* text */}
                             <div className="mt-4">
                               <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
+                                <Link to="/grocery/shop" className="text-inherit">
                                   Atta, Rice &amp; Dal
                                 </Link>
                               </h5>
@@ -860,109 +754,7 @@ const Home = () => {
                 >
                   {/* <hr className="my-lg-14 my-8"> */}
                   {/* row */}
-                  <div className="row align-items-center text-center justify-content-center">
-                    <div className=" col-lg-6 col-md-6 fade-in-left">
-                      <Slide direction="left">
-                        <div className="mb-6">
-                          <div className="mb-7">
-                            {/* heading */}
-                            <h1>Get the FreshCart app</h1>
-                            <h5 className="mb-0">
-                              We will send you a link, open it on your phone to
-                              download the app.
-                            </h5>
-                          </div>
-                          <div className="mb-5">
-                            {/* form check */}
-                            <div className="form-check form-check-inline">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault1"
-                              />
-                              <label
-                                className="form-check-label"
-                                htmlFor="flexRadioDefault1"
-                              >
-                                Email
-                              </label>
-                            </div>
-                            {/* form check */}
-                            <div className="form-check form-check-inline">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault2"
-                                defaultChecked
-                              />
-                              <label
-                                className="form-check-label"
-                                htmlFor="flexRadioDefault2"
-                              >
-                                Phone
-                              </label>
-                            </div>
-                            {/* form */}
-                            {/* <form className="row g-3 mt-2">
-
-          
-          <div className="col-6 ">
-            
-            <input type="text" className="form-control" placeholder="Phone">
-          </div>
-           
-          <div className="col-6">
-            <button type="submit" className="btn btn-primary mb-3">Share app link</button>
-          </div>
-        </form> */}
-                          </div>
-                          <div>
-                            {/* app */}
-                            {/* <small>Download app from</small> */}
-                            <ul className="list-inline mb-0 mt-2 ">
-                              {/* list item */}
-                              <li className="list-inline-item">
-                                {/* img */}
-                                <Link to="#!">
-                                  {" "}
-                                  <img
-                                    src={appstore}
-                                    alt="appstore"
-                                    style={{ width: 140 }}
-                                  />
-                                </Link>
-                              </li>
-                              <li className="list-inline-item">
-                                {/* img */}
-                                <Link to="#!">
-                                  {" "}
-                                  <img
-                                    src={googleplay}
-                                    alt="googleplay"
-                                    style={{ width: 140 }}
-                                  />
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
-                    <div className=" offset-lg-2 col-lg-4 col-md-6 fade-zoom">
-                      <Slide direction="right">
-                        <div className="text-lg-start">
-                          {/* img */}
-                          <img
-                            src={iphone}
-                            alt="iphone"
-                            className=" img-fluid"
-                          />
-                        </div>
-                      </Slide>
-                    </div>
-                  </div>
+                 
                   {/* <hr className="my-lg-14 my-8"> */}
                 </div>
               </section>
@@ -973,7 +765,7 @@ const Home = () => {
                   <div className="row">
                     <div className="col-md-12 mb-6">
                       <div className="section-head text-center mt-8">
-                        <h3 className="h3style" data-title="Daily Best Sells">
+                        <h3 className="h3style text-3xl font-bold pt-5 pb-5" data-title="Daily Best Sells">
                           Daily Best Sells
                         </h3>
                         <div className="wt-separator bg-primarys"></div>
@@ -1473,8 +1265,8 @@ const Home = () => {
               </section>
             </>
             <>
-              <section className="my-lg-14 my-8">
-                <div className="container" style={{ marginTop: 50 }}>
+              <section className="my-lg-14 pt-8  pb-0 my-8">
+                <div className="container bg-gray-200" style={{ marginTop: 50 }}>
                   <div
                     className="row justify-content-center  g-4"
                     style={{ textAlign: "center" }}
@@ -1572,7 +1364,7 @@ const Home = () => {
               </section>
             </>
             <>
-              <div className="container">
+              <div className="container pt-16">
                 <Slider {...settings2}>
                   {/* <div className="images swiper-slide p-4">
     <div className="item">
@@ -1686,6 +1478,7 @@ const Home = () => {
      </Link>
     </div>
   </div> */}
+  
                   <div className="m-1">
                     <div className="partner-list">
                       <img

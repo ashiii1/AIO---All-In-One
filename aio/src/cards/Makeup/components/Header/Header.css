@@ -1,0 +1,39 @@
+.navigation-container {
+  background-color: var(--white);
+  border-bottom: 0.5px solid var(--grey);
+  position: sticky;
+  top: 38px;
+  left: 0px;
+  z-index: 4;
+}
+
+.lib-name-1,
+.lib-name-2 {
+  font-family: "Cormorant Upright", serif;
+  font-size: 3rem;
+}
+
+.user-icon {
+  font-size: 3rem;
+  color: var(--secondary-text-color);
+}
+
+.cart-icon {
+  font-size: 3rem;
+  color: var(--secondary-text-color);
+}
+
+.lib-name-sm {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .lib-name-sm {
+    display: block;
+  }
+
+  .navigation-container {
+    top: 29px;
+    position: sticky;
+  }
+}

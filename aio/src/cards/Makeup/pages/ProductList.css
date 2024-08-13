@@ -1,9 +1,0 @@
-input{
-    height: 0.9rem;
-    width: 0.9rem;
-}
-
-input[type="checkbox"]:checked{
-    border: none;
-    box-shadow: 0 0 0 2px lightblue;
-}

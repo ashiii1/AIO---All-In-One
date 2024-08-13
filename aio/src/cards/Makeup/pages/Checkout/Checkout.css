@@ -1,0 +1,33 @@
+.address-selection-input {
+  align-items: flex-start;
+  margin: 5px 9rem;
+}
+
+.order-details-container {
+  border: 1px solid var(--black);
+  padding: 10px;
+  height: fit-content;
+  margin: 5px 9rem;
+}
+
+.text-sm {
+  margin: 5px;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .address-selection-title{
+    margin-top: 4rem;
+  }
+
+  .checkout-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
