@@ -104,7 +104,7 @@ const PlaceOrder = () => {
           <button
             className='mt-[30px]'
             type='button' // Ensure the button does not submit the form
-            onClick={() => navigate('/order')} // Use navigate function
+            onClick={() => navigate('/food-order/order')} // Use navigate function
           >
             PROCEED TO PAYMENT
           </button>

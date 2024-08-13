@@ -58,7 +58,7 @@ const Cart = () => {
                 <p>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</p>
             </div>
           </div>
-            <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
+            <button onClick={()=>navigate('/food-order/order')}>PROCEED TO CHECKOUT</button>
         </div>
         <div className="cart-promocode flex-[1]">
           <div>

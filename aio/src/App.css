@@ -12,10 +12,10 @@
     @apply p-4;
   }
 }
-
+/* 
 .active {
-  background-color: indigo;
-}
+  background-color: gray ;
+} */
 
 .alice-carousel {
   position: relative;
