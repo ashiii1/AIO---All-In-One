@@ -52,7 +52,7 @@ const HomePage = () => {
       <Categories />
       <h5 className="sub-heading">Offers you wont miss!</h5>
       <div className="offers-section">
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           {" "}
           <img
             className="offer-img"
@@ -66,7 +66,7 @@ const HomePage = () => {
             }
           />{" "}
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           <img
             className="offer-img"
             src={offerImage2}
@@ -76,7 +76,7 @@ const HomePage = () => {
         </Link>
       </div>
       <h5 className="sub-heading">Our new launches!</h5>
-      <Link to="/productlistingpage">
+      <Link to="/makeup/productlistingpage">
         {" "}
         <img
           className="mustHave"
@@ -86,7 +86,7 @@ const HomePage = () => {
       </Link>
       <h5 className="sub-heading">Your summer store is here!</h5>
       <div className="offers-section">
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           {" "}
           <img
             className="offer-img"
@@ -95,7 +95,7 @@ const HomePage = () => {
             onClick={(e) => dispatch({ type: "SET_TAG", payload: "biotique" })}
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           {" "}
           <img
             className="offer-img"
@@ -108,7 +108,7 @@ const HomePage = () => {
 
       <h5 className="sub-heading">Eye-conic brands</h5>
       <div className="offers-section">
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           {" "}
           <img
             className="offer-img"
@@ -122,7 +122,7 @@ const HomePage = () => {
             }
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           {" "}
           <img
             className="offer-img"
@@ -133,7 +133,7 @@ const HomePage = () => {
         </Link>
       </div>
       <h5 className="sub-heading">Save more and buy more now!</h5>
-      <Link to="/productlistingpage">
+      <Link to="/makeup/productlistingpage">
         {" "}
         <img
           className="mustHave"
@@ -145,7 +145,7 @@ const HomePage = () => {
       </Link>
       <h5 className="sub-heading">Season sale!</h5>
       <div className="offers-section">
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           {" "}
           <img
             className="offer-img"
@@ -156,7 +156,7 @@ const HomePage = () => {
             }
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           {" "}
           <img
             className="offer-img"
@@ -173,7 +173,7 @@ const HomePage = () => {
       </div>
       <h3 className="sub-heading">Featured Top Brands</h3>
       <div className="brands-section">
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           <img
             className="brand-img"
             src={brandImage1}
@@ -186,7 +186,7 @@ const HomePage = () => {
             }
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           <img
             className="brand-img"
             src={brandImage2}
@@ -199,7 +199,7 @@ const HomePage = () => {
             }
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           <img
             className="brand-img"
             src={brandImage4}
@@ -212,7 +212,7 @@ const HomePage = () => {
             }
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           <img
             className="brand-img"
             src={brandImage7}
@@ -225,7 +225,7 @@ const HomePage = () => {
             }
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           <img
             className="brand-img"
             src={brandImage5}
@@ -238,7 +238,7 @@ const HomePage = () => {
             }
           />
         </Link>
-        <Link to="/productlistingpage">
+        <Link to="/makeup/productlistingpage">
           <img
             className="brand-img"
             src={brandImage6}
