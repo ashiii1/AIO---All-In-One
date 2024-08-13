@@ -4,17 +4,17 @@ import { menu_list } from "../../assets/assets";
 
 const ExploreMenu = ({category, setCategory}) => {
   return (
-    <div className="exploref-menu flex flex-col gap-5" id="explore-menu">
-      <h1 className="menu-text text-3xl font-[500] text-[#262626]">Explore our menu</h1>
-      <p className="lg:max-w-[60%] sm:max-w-full text-[#808080]">
+    <div className=" flex flex-col gap-5" id="explore-menu">
+      <h1 className=" text-center pt-5 menu-text text-3xl font-[500] text-[#262626]">Explore our menu</h1>
+      <p className="lg:max-w-[90%] pb-5  text-xl pl-56 text-center sm:max-w-full text-[#808080]">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid ipsam
         veniam voluptatibus quia exercitationem velit quod quae officia unde,
         suscipit
       </p>
-      <div className="exploref-menu-list flex justify-between items-center gap-[30px] text-center m-[20px.0px] overflow-x-scroll">
+      <div className="exploref-menu-list  flex justify-between items-center gap-[20px] text-center m-[30px.0px] overflow-x-scroll">
         {menu_list.map((item,index)=>{
             return (
-            <div onClick={()=>setCategory(prev=> prev===item.menu_name?"All":item.menu_name)} key={index} className="menu-list-item">
+            <div onClick={()=>setCategory(prev=> prev===item.menu_name?"All":item.menu_name)} key={index} className="p-2 grid gap-4">
                 <img className={category===item.menu_name? "active" : "" } src={item.menu_image} alt="" />
                 <p className="mt-[10px] text-[#747474] text-[1.4vw,16px] cursor-pointer ">{item.menu_name}</p>
             </div>

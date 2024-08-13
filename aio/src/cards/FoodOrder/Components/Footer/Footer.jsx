@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets'
 
 const Footer = () => {
   return (
-    <div className='footer mt-24 text-[#d9d9d9] bg-[#323232] lg:flex lg:flex-col items-center gap-5 px-[8vw] pt-[80px]' id='footer'>
+    <div className='footer mt-14 text-[#d9d9d9] bg-[#323232] lg:flex lg:flex-col items-center gap-5 px-[8vw] pt-[20px]' id='footer'>
         <div className='w-full lg:grid lg:grid-cols-[2fr.1fr.1fr] gap-[80px] '>
             <div className='left lg:w-[80%]  lg:flex lg:flex-col lg:items-start gap-5'>
                 <img src={assets.logo} alt="" />
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         <hr className='lg:w-full h-[2px] my-[20px] mx-0 bg-gray-50 border-none'/>
         <p className='lg:text-[17px] text-center sm:text-[14px] mb-5'>
-            copyright 2024 &copy; Tomato.com - All Right Reserved
+            copyright 2024 &copy; SK ASHI - All Right Reserved
         </p>
     </div>
   )
