@@ -19,7 +19,6 @@ const cardsData = [
   { imageSrc: 'https://boutiquestoredesign.com/wp-content/uploads/2018/09/clothes-store-floating-wall-display-shelves-design-ideas-for-retail.jpg', title: 'Shopping', description: 'Trendy clothes and accessories', link: '/shopping' },
   { imageSrc: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg', title: 'To Let', description: 'Get into your new house', link: '/tolet' },
   { imageSrc: 'https://tse3.mm.bing.net/th?id=OIP.YTTvKnlFKw5hlbwIGYTo9AAAAA&pid=Api&P=0&h=180', title: 'Foodorder', description: 'Get into your new house', link: '/food-order' },
-  { imageSrc: 'https://techcrunch.com/wp-content/uploads/2015/03/groceries-e1554037962210.jpg', title: 'Vegetables', description: 'Fresh vegetables for you', link: '/vegetables' },
   { imageSrc: 'https://cdn-icons-png.flaticon.com/512/10203/10203752.png', title: 'Second Hand', description: 'Buy and sell second-hand items', link: '/secondhand' },
 ];
 
@@ -35,7 +34,6 @@ const Navbar = () => {
         <li className="hover:text-black"><a href="/grocery">Grocery</a></li>
         <li className="hover:text-black"><a href="/tolet">To Let</a></li>
         <li className="hover:text-black"><a href="/food-order">Food Order</a></li>
-        <li className="hover:text-black"><a href="/vegetables">Vegetables</a></li>
         <li className="hover:text-black"><a href="/secondhand">Second Hand</a></li>
       </ul>
     </nav>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ShoppingMain from '../cards/Shopping/ShoppingMain';
-import VegetablesMain from '../cards/Vegetables/VegetablesMain';
 import MakeupMain from './Makeup/MakeupMain';
 import ToletMain from '../cards/Tolet/ToletMain';
 import GroceryMain from '../cards/Grocery/GroceryMain';
@@ -21,7 +20,6 @@ const CardsApp = () => {
       <Route path="/" element={<CardsMain/>} />
 
         <Route path="/shopping/*" element={<ShoppingMain />} />
-        <Route path="/vegetables/*" element={<VegetablesMain />} />
         <Route path="food-order/*" element={<FoodOrderMain />} />
         <Route path="/makeup/*" element={<MakeupMain />} />
         <Route path="/furnituree/*" element={<FurnitureMain />} />
