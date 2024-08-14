@@ -7,7 +7,6 @@ import ToletMain from '../cards/Tolet/ToletMain';
 import GroceryMain from '../cards/Grocery/GroceryMain';
 import BookMain from '../cards/BookShop/BookMain';
 import SecondHandMain from '../cards/SecondHand/SecondHandMain';
-import PostMain from '../cards/Post/PostMain';
 import FurnitureMain from '../cards/Furniture/FurnitureMain';
 import FoodOrderMain from '../cards/FoodOrder/FoodOrderMain';
 import CardsMain from './CardsMain'
@@ -30,7 +29,6 @@ const CardsApp = () => {
         <Route path="/grocery/*" element={<GroceryMain />} />
         <Route path="/books/*" element={<BookMain />} />
         <Route path="/secondhand" element={<SecondHandMain />} />
-        <Route path="/post" element={<PostMain />} />      
          
       </Routes>
   </BrowserRouter>

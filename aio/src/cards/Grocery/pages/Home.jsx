@@ -238,7 +238,7 @@ const Home = () => {
                       <div className="carousel-item active">
                         <div
                           style={{
-                            background: `url(${slider1}) no-repeat`,
+                            background: `url(https://www.shutterstock.com/image-photo/grocery-shopping-cart-260nw-380454643.jpg) no-repeat`,
                             backgroundSize: "cover",
                             borderRadius: ".5rem",
                             backgroundPosition: "center",
@@ -255,8 +255,8 @@ const Home = () => {
                               Introduced a new model for online grocery shopping
                               and convenient home delivery.
                             </p>
-                            <Link to="/grocery/shop" className="btn btn-dark mt-2">
-                            <div className="w-56 text-center text-3xl pt-20">
+                            <Link to="/grocery/shop" className="btw-0 btn-da  pt-3">
+                            <div className="w-36 h-15  bg-black text-center rounded-sm text-white text-3xl pt-2">
                               Shop Now{" "}
                               </div>
                               <i className="feather-icon icon-arrow-right ms-1" />

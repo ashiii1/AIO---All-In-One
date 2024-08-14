@@ -1,5 +1,6 @@
 import React from 'react';
 import  { useEffect, useState } from 'react';
+import MainProd from './MainProd';
 
 
 const banners = [
@@ -31,7 +32,6 @@ const Navbar = () => {
         <li className="hover:text-black"><a href="/furnituree">Furniture</a></li>
         <li className="hover:text-black"><a href="/shopping">Shopping</a></li>
         <li className="hover:text-black"><a href="/makeup">Makeup</a></li>
-        <li className="hover:text-black"><a href="/realestate">Real Estate</a></li>
         <li className="hover:text-black"><a href="/grocery">Grocery</a></li>
         <li className="hover:text-black"><a href="/tolet">To Let</a></li>
         <li className="hover:text-black"><a href="/food-order">Food Order</a></li>
@@ -102,6 +102,7 @@ const LandingPage = () => {
       <Navbar />
       <BannerSlider />
       <CardsMain />
+      <MainProd/>
     </div>
   );
 };

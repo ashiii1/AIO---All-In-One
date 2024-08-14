@@ -13,6 +13,7 @@ function NavTabs({ search, setSearch }) {
   if(menu) {
     menuBar =  <div className="">
         <ul className="fixed w-full ml-[-10px]   mt-2 md:ml-[15px] bg-zinc-200  z-30">
+          
           <li className="border-b-2 border-zinc-300 w-full bg-green-500 hover:bg-black duration-300 ">
             <NavLink to="/shopping" className="nav-link text-2xl text-white  px-2 m-1" onClick={() => setMenu(!menu)}> Home </NavLink>          
           </li>
@@ -36,10 +37,16 @@ function NavTabs({ search, setSearch }) {
   return (
     <nav className="fixed top-0 w-full flex flex-col justify-evenly p-2  md:flex-row   h-[auto] z-10 bg-red-400">
      <div className="flex mx-auto p-3 items-center justify-evenly">
-      <div className="sm:mx-[-110px]" >
+      <div className="sm:mx-[-110px] flex" >
+        <div className="pr-28">
+        <Link to="/shopping">
+        <h1 className=" text-4xl text-black  w-5 p-0 lg:text-4xl md:text-3xl px-5 font-bold pr-6">ASHI</h1>
+        </Link>
+        </div>
         <Link to="/shopping">
         <h1 className=" text-4xl text-white lg:text-4xl md:text-3xl px-5 font-bold">AIO</h1>
         </Link>
+        
       </div>
       <div className="fixed left-7 md:hidden text-white w-[80px]" onClick={() => setMenu(!menu)}>
         {!menu ? <MenuIcon className="w-11" /> : <XIcon className="w-11"  />}

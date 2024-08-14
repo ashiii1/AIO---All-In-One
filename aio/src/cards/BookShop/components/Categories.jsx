@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Books from './books.json';
 import ReactPaginate from 'react-paginate';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Banner from './Banner';
 
 function Categories() {
   // Extract all unique categories from the books data
@@ -62,6 +63,8 @@ function Categories() {
   };
 
   return (
+    <>
+    <Banner/>
     <div className='categories'>
       <span className='text-3xl text-black pt-1'>{uniqueCategories.length} Categories</span>
       <span className='text-xl text-black p-4'>Total Books:{totalBooks}</span>
@@ -90,6 +93,7 @@ function Categories() {
         nextLabel={<FaChevronRight />}
       />
     </div>
+    </>
   );
 }
 

@@ -73,11 +73,13 @@ const CardDetail = () => {
         <div className="card-detail-info">
           <h1>{foodItem.name}</h1>
           <p>{foodItem.description}</p>
-          <p className="food-price text-[tomato] text-[42px]">${foodItem.price}</p>
-          <button onClick={() => handleAddToCart(id)} className="add-to-cart-btn bg-orange-400 size-22 w-10 flex flex-row text-black">
+          <p className="food-price  text-[42px]">${foodItem.price}</p>
+          <div className=''>
+          <button onClick={() => handleAddToCart(id)} className="add-to-cart-bt  size-22 w-10 flex flex-row text-black">
             <img src={image} alt="Cart" className='' />
-            <div className='flex flex-row w-36 pl-1 pt-5'>Cart</div>
+            <div className='flex flex-row w-36 pl-1 pt-2'>Cart</div>
           </button>
+          </div>
         </div>
       </div>
       <div className="similar-items">

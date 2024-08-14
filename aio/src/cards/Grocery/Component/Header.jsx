@@ -62,7 +62,7 @@ const Header = () => {
           <li className="nav-item text-xl">
             <li className="nav-item dmenu dropdown text-xl">
               <Link
-                className="nav-lin text-xl pb-10 dropdown-toggle hover:text-gray-200"
+                className="nav-lin text-xl pb-10 dropdown-toggle hover:text-gray-700"
                 to="/grocery/shop"
                 id="navbarDropdown"
                 role="button"

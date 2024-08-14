@@ -1,11 +1,8 @@
 import React from 'react'
-import MakeUpApp from './MakeUpApp'
 
 const MakeupMain = () => {
   return (
-    <div>
-      <MakeUpApp/>
-    </div>
+    <div>MakeupMain</div>
   )
 }
 
