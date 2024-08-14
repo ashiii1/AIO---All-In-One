@@ -238,7 +238,7 @@ const Home = () => {
                       <div className="carousel-item active">
                         <div
                           style={{
-                            background: `url(https://www.shutterstock.com/image-photo/grocery-shopping-cart-260nw-380454643.jpg) no-repeat`,
+                            background: `url(${slider1}) no-repeat`,
                             backgroundSize: "cover",
                             borderRadius: ".5rem",
                             backgroundPosition: "center",
@@ -255,7 +255,7 @@ const Home = () => {
                               Introduced a new model for online grocery shopping
                               and convenient home delivery.
                             </p>
-                            <Link to="/grocery/shop" className="btw-0 btn-da  pt-3">
+                            <Link to="/grocery/shop" className="btw-0 btn-da ">
                             <div className="w-36 h-15  bg-black text-center rounded-sm text-white text-3xl pt-2">
                               Shop Now{" "}
                               </div>
@@ -293,30 +293,7 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <Link
-                      className="carousel-control-prev"
-                      to=""
-                      role="button"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        className="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      />
-                      <span className="visually-hidden">Previous</span>
-                    </Link>
-                    <Link
-                      className="carousel-control-next"
-                      to=""
-                      role="button"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        className="carousel-control-next-icon"
-                        aria-hidden="true"
-                      />
-                      <span className="visually-hidden">Next</span>
-                    </Link>
+                   
                   </div>
                 </div>
               </section>
