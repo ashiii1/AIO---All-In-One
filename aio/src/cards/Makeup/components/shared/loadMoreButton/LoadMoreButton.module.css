@@ -1,0 +1,16 @@
+.loadMore_btn {
+  display: block;
+  padding: 8px 40px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all .3s ease-in-out;
+  margin: 40px auto 0;
+}
+
+.loadMore_btn:hover,
+.loadMore_btn:active {
+  background-color: #08244b;
+}

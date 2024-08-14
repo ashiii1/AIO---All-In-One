@@ -1,79 +1,184 @@
-import React from 'react'
-import { useContext } from 'react'
-import { useState } from 'react'
-import { AuthContext } from '../../AuthProvider'
-import { calculateFinalCartPrice, findPriceOfAllItems, findTotalDiscount } from '../../Services/CartServices'
-import { StateContext } from '../../Context'
-import './Checkout.css'
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import styles from "./Checkout.module.css";
+import Helmet from "../../components/shared/helmet/Helmet";
+import PageTitle from "../../components/shared/pageTitle/PageTitle";
+import Container from "../../components/shared/contentContainer/Container";
+import FormInput from "../../components/shared/formInput/FormInput";
+import { DeliveryValidationSchema } from "./validationSchema";
+import { cartActions } from "../../redux/slices/cartSlice"
 
 const Checkout = () => {
-  const { state } = useContext(StateContext)
-  const { user } = useContext(AuthContext)
-  const [selectedAddress, setSelectedaddress] = useState({})
-  const totalPrice = findPriceOfAllItems(state.cart)
-  const totalDiscount = findTotalDiscount(state.cart)
-  const finalCartPrice = calculateFinalCartPrice(totalPrice, totalDiscount, 50)
+  const navigate = useNavigate();
+  const [isProcessing, setIsProcessing] = useState(false);
+  const totalAmount = useSelector(state => state.cart.cartTotalAmount);
+  const dispatch = useDispatch();
+
+  const [shippingCharge, setShippingCharge] = useState("");
+
+  useEffect(() => {
+    dispatch(cartActions.getTotals());
+
+    if (totalAmount <= 500) {
+      setShippingCharge(30);
+    } else if (totalAmount <= 1000) {
+      setShippingCharge(25);
+    } else if (totalAmount > 1001) {
+      setShippingCharge(0);
+    }
+  }, [totalAmount, dispatch]);
+  
+  const {
+    control,
+    handleSubmit,
+    formState: { errors, isDirty, isValid }
+  } = useForm({
+    resolver: yupResolver(DeliveryValidationSchema),
+    defaultValues: {
+      name: "" ,
+      email: "",
+      phone: "",
+      streetAddress: "",
+      city: "",
+      country: "",
+      postalCode: "",
+    },
+    mode: 'onChange'
+  });
+
+  const onSubmit = (deliveryInfo) => {
+    setIsProcessing(true);
+    console.log(deliveryInfo);
+    localStorage.setItem("deliveryInfo", JSON.stringify(deliveryInfo));
+    setIsProcessing(false);
+    navigate('/payment');
+  }
+  
   return (
-    <>
-      <div className='checkout-page-container flex-hz'>
-        <div className='address-selection-container flex-vt'>
-          <h4 className='address-selection-title'>Select address to deliver</h4>
-          {state.address.map(addressItem => {
-            console.log(addressItem)
-            return (
-              <div className='address-selection-input flex-hz'><input type="radio" id="address-selection-input" name="address" value={addressItem} onChange={() => setSelectedaddress(addressItem)} /><label for="address-selection-input">
-                <p className='text-sm'>{addressItem.address_type}</p>
-                <p className='text-sm'>{addressItem.flatno},  {addressItem.bldg}</p>
-                <p className='text-sm'>{addressItem.street}</p>
-                <p className='text-sm'>{addressItem.userstate}, {addressItem.country}</p>
-                <p className='text-sm'>{addressItem.pincode}</p>
-                <p className='text-sm'>{addressItem.mobile}</p>
-              </label></div>
-            )
-          })}
-        </div>
-        <div className='order-details-container flex-vt'>
-          <h4>Order Details</h4>
-          <h5>Item</h5>
-          {state.cart.map(item => {
-            return (
-              <div className='flex-hz jc-sa'>
-                <p className='text-sm'>{item.name}</p>
-                <p className='text-sm'>{item.qty}</p>
-              </div>
-            )
-          })}
-          <h4 class="font-weight-bold">PRICE DETAILS</h4>
-          <div class="price-wrapper flex-hz">
-            <p class="text-sm">Price </p>
-            <p class="text-sm">Rs {totalPrice} </p>
-          </div>
-          <div class="price-wrapper flex-hz">
-            <p class="text-sm">Discount</p>
-            <p class="text-sm">- Rs {totalDiscount}</p>
-          </div>
-          <div class="price-wrapper flex-hz">
-            <p class="text-sm">Delivery Charges</p>
-            <p class="text-sm">Rs 50</p>
-          </div>
-          <div class="price-wrapper flex-hz">
-            <h4 class="font-weight-bold">TOTAL AMOUNT</h4>
-            <p class="text-sm">Rs {finalCartPrice}</p>
-          </div>
-          {Object.keys(selectedAddress).length !== 0 && <>
-            <div className='address-display-container flex-vt'>
-              <h4>Deliver to</h4>
-              <p className='text-sm'>{user.firstName} {user.lastName}</p>
-              <p className='text-sm'>{selectedAddress.flatno},  {selectedAddress.bldg}, {selectedAddress.street}</p>
-              <p className='text-sm'>{selectedAddress.userstate}, {selectedAddress.country}</p>
-              <p className='text-sm'>{selectedAddress.pincode}</p>
-              <p className='text-sm'>{selectedAddress.mobile}</p>
+    <Helmet title='Checkout'>
+      <PageTitle title="Checkout" />
+      <section>
+        <Container>
+          <div className={styles.checkout}>
+            <div className={styles.delivery_details}>
+              <h3 className={styles.title}>PLEASE ENTER THE DELIVERY DETAILS</h3>
+              <form id="deliveryForm" className={styles.delivery_form} onSubmit={handleSubmit(onSubmit)}>
+                <Controller
+                  name="name"
+                  control={control}
+                  render={({ field: {value, onChange} }) => (
+                    <FormInput
+                      value={value}
+                      onChange={onChange}
+                      type={'text'} 
+                      placeholder={'Enter your name'} 
+                      errorText={errors.name?.message}
+                    />
+                  )}
+                />
+                <Controller
+                  name="email"
+                  control={control}
+                  render={({ field: {value, onChange} }) => (
+                    <FormInput
+                      value={value}
+                      onChange={onChange}
+                      type={'email'}
+                      placeholder={'Enter your email'}
+                      errorText={errors.email?.message}
+                    />
+                  )}
+                />
+                <Controller
+                  name="phone"
+                  control={control}
+                  render={({ field: {value, onChange} }) => (
+                    <FormInput
+                      value={value}
+                      onChange={onChange}
+                      type={'tel'} 
+                      placeholder={'Phone number'}
+                      errorText={errors.phone?.message}
+                    />
+                  )}
+                />
+                <Controller
+                  name="streetAddress"
+                  control={control}
+                  render={({ field: {value, onChange} }) => (
+                    <FormInput
+                      value={value}
+                      onChange={onChange}
+                      type={'text'} 
+                      placeholder={'Street address'}
+                      errorText={errors.streetAddress?.message}
+                    />
+                  )}
+                />
+                <Controller
+                  name="city"
+                  control={control}
+                  render={({ field: {value, onChange} }) => (
+                    <FormInput
+                      value={value}
+                      onChange={onChange}
+                      type={'text'} 
+                      placeholder={'City'}
+                      errorText={errors.city?.message}
+                    />
+                  )}
+                />
+                <Controller
+                  name="postalCode"
+                  control={control}
+                  render={({ field: {value, onChange} }) => (
+                    <FormInput
+                      value={value}
+                      onChange={onChange}
+                      type={'text'} 
+                      placeholder={'Postal code'}
+                      errorText={errors.postalCode?.message}
+                    />
+                  )}
+                />
+                <Controller
+                  name="country"
+                  control={control}
+                  render={({ field: {value, onChange} }) => (
+                    <FormInput
+                      value={value}
+                      onChange={onChange}
+                      type={'text'} 
+                      placeholder={'Country'}
+                      errorText={errors.country?.message}
+                    />
+                  )}
+                />
+              </form>
             </div>
-          </>}
-          <button className='btn btn-secondary'>Place Order</button>
-        </div>
-      </div>
-    </>
-  )
+            <div className={styles.checkout_cart}>
+              <div className={styles.checkout_info}>
+                <h5 className={styles.subtitle}>Order value</h5>
+                <p className={styles.delivery_sum}>$ {totalAmount}</p>
+              </div>
+              <div className={styles.checkout_info}>
+                <h5 className={styles.subtitle}>Shipping</h5>
+                <p className={styles.delivery_sum}>{shippingCharge === 0 ? 'Free shipping' : '$'+ shippingCharge}</p>
+              </div>
+              <div className={`${styles.checkout_info} ${styles.total}`}>
+                <h5 className={styles.subtitle}>TOTAL</h5>
+                <p className={styles.delivery_sum}>${totalAmount + shippingCharge}</p>
+              </div>
+              <button type="submit" form="deliveryForm" disabled={!isDirty || !isValid} className={styles.continue_btn}>{isProcessing ? 'Processing...' :'Continue'}</button>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </Helmet>
+  );
 }
-export { Checkout }
+
+export default Checkout;

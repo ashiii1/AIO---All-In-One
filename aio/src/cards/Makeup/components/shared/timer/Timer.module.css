@@ -1,0 +1,98 @@
+.timer {
+  background: var(--primary-color);
+  height: 450px;
+  margin-bottom: 0;
+  padding: 40px 0;
+}
+
+.timer_counterBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.timer_title h3, h4 {
+  color: #fff;
+}
+
+.timer_title h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.timer_title h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.timer_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.timer_data {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer_time h2, h5, span {
+  color: #fff;
+  text-align: center;
+}
+
+.timer_time h2, span {
+  font-size: 1.75rem;
+}
+
+.timer_time h2 {
+  margin-bottom: 5px;
+}
+
+.timer_time h5 {
+  font-size: 1rem;
+}
+
+.timer_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.shop_btn {
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media screen and (max-width:768px) {
+  .timer_counter {
+    text-align: center;
+  }
+
+  .timer_time h2, span {
+    font-size: 1.1rem;
+  }
+
+  .timer_time h5 {
+    font-size: .9rem;
+  }
+
+  .timer_wrapper {
+    margin-bottom: 60px;
+  }
+  
+  .timer_img {
+    display: none;
+  }
+
+  .shop_btn {
+    font-size: .9rem;
+  }
+}

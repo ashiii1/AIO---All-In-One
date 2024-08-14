@@ -1,0 +1,32 @@
+.delivery_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn_box {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.cansel_btn {
+  color: var(--primary-color);
+  background: #fff;
+  border: 1px solid var(--primary-color);
+}
+
+.continue_btn {
+  color: #fff;
+  background: var(--primary-color);
+}

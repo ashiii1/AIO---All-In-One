@@ -1,0 +1,149 @@
+.grid_container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.grid_inner {
+  padding: 50px 40px;
+  box-shadow: -4px -2px 20px -7px #cfd5df;
+}
+
+.contact_text {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.contact_ways {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact_ways span {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  padding: 5px 8px;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contacts_box {
+  background: var(--primary-color);
+  padding: 45px 0 25px 30px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contacts_item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.contacts_icon {
+  display: flex;
+  align-items: center;
+}
+
+.contacts_icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--green-color);
+}
+
+.contacts_link {
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  color: var(--primary-color);
+  background: var(--green-color);
+  border-radius: 5px 0 0 5px;
+  display: inline-block;
+}
+
+.contact_work {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 1rem;
+  color: var(--green-color);
+}
+
+.work_hours {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.submit_btn {
+  color: #fff;
+  background-color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 5px;
+  padding: 10px 50px;
+  transition: all .3s ease-in;
+}
+
+.submit_btn:hover,
+.submit_btn:active {
+  background-color: #091e4be8;
+}
+
+.success {
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  width: 100%;
+  margin: auto;
+}
+
+.success_text {
+  color: #16a34a;
+}
+
+@media screen and (max-width: 768px) {
+  .grid_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form_input {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contacts_box {
+    gap: 30px;
+  }
+}

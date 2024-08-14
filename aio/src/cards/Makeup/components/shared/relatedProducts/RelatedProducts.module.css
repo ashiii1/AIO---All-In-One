@@ -1,0 +1,12 @@
+.related_section {
+  padding: 40px 0;
+  background: var(--bg-color);
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 0;
+}
+
+.related_sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}

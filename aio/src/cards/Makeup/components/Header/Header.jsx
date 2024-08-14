@@ -1,200 +1,118 @@
-// import React, { useState } from "react";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { useContext } from "react";
-// import { StateContext } from "../../Context.js";
-// import { Searchbar } from "../index.js";
-// import "./Header.css";
-// import { AuthContext } from "../../AuthProvider.jsx";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faCartArrowDown,
-//   faHeart,
-//   faPalette,
-//   faShoppingBag,
-//   faShoppingCart,
-//   faUser,
-//   faUserCheck,
-//   faUserCircle,
-//   faUserEdit,
-// } from "@fortawesome/free-solid-svg-icons";
-// import { useMediaQuery } from "react-responsive";
-
-// const Header = () => {
-//   const { state, dispatch } = useContext(StateContext);
-//   const { token, setToken } = useContext(AuthContext);
-//   const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
-//   const location = useLocation();
-//   let navigate = useNavigate();
-//   const handleLogout = () => {
-//     localStorage.clear();
-//     setToken(undefined);
-//     navigate("/");
-//   };
-
-//   return (
-//     <>
-//       <div class="navigation-container flex-hz">
-//         <div class="navigation-item-1">
-//           <Link to="/" className="links">
-//             {" "}
-//             <h5 class="lib-name-1">
-//               Naari <span class="lib-name-2">Care</span>
-//             </h5>
-//           </Link>
-//         </div>
-//         <Link to="/" className="links lib-name-sm">
-//           {" "}
-//           <h5 class="lib-name-1">
-//             Naari <span class="lib-name-2">Care</span>
-//           </h5>
-//         </Link>
-//         {!isMobile && <Searchbar />}
-//         {token === undefined ? (
-//           <>
-//             <div class="navigation-item-3 flex-hz">
-//               <Link to="/signin">
-//                 {" "}
-//                 <button class="btn btn-primary">Signin</button>
-//               </Link>
-//               <Link to="/signin">
-//                 {" "}
-//                 <FontAwesomeIcon
-//                   className="cart-icon"
-//                   icon={faShoppingCart}
-//                 ></FontAwesomeIcon>
-//               </Link>
-//               <Link to="/signin">
-//                 {" "}
-//                 <FontAwesomeIcon
-//                   className="cart-icon"
-//                   icon={faHeart}
-//                 ></FontAwesomeIcon>
-//               </Link>
-//             </div>
-//           </>
-//         ) : (
-//           <>
-//             <div class="navigation-item-3 flex-hz">
-//               <button class="btn btn-primary" onClick={handleLogout}>
-//                 Logout
-//               </button>
-//               <Link to="/user_profile">
-//                 {" "}
-//                 <FontAwesomeIcon
-//                   icon={faUser}
-//                   className="user-icon"
-//                 ></FontAwesomeIcon>
-//               </Link>
-//               <Link to="/cartpage">
-//                 <i class="fa fa-shopping-cart">
-//                   <span class="badge-w-icon">{state.cart.length}</span>
-//                 </i>
-//               </Link>
-//               <Link to="/wishlistpage">
-//                 <i class="fa fa-heart">
-//                   <span class="badge-w-icon">{state.wishlist.length}</span>
-//                 </i>
-//               </Link>
-//             </div>
-//           </>
-//         )}
-//       </div>
-//     </>
-//   );
-// };
-
-// export { Header };
-import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { StateContext } from "../../Context.js";
-import { Searchbar } from "../index.js";
-import "./Header.css";
-import { AuthContext } from "../../AuthProvider.jsx";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faShoppingBasket,  // Similar to faShoppingCart
-  faStar,            // Similar to faHeart
-  faUserCircle,      // Similar to faUser
-} from "@fortawesome/free-solid-svg-icons";
-import { useMediaQuery } from "react-responsive";
+import React, { useRef, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, Link } from "react-router-dom";
+import styles from "./Header.module.css";
+import { motion } from "framer-motion";
+import { RiShoppingBagLine, RiMenuLine } from "@remixicon/react";
+import Container from "../shared/contentContainer/Container";
+import Logo from "../shared/logo/Logo";
+import NavBar from "../shared/navBar/Nav";
+import userIcon from "../../assets/images/user-icon.png"
+import { authActions } from "../../redux/slices/authSlice";
 
 const Header = () => {
-  const { state, dispatch } = useContext(StateContext);
-  const { token, setToken } = useContext(AuthContext);
-  const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
-  const location = useLocation();
-  let navigate = useNavigate();
-  const handleLogout = () => {
-    localStorage.clear();
-    setToken(undefined);
-    navigate("/");
+  const [showUser, setShowUser] = useState(false);
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
+  const products = useSelector(state => state.cart.cartItems);
+  const isLogged = useSelector(state => state.auth.isLoggedIn);
+  const user = useSelector(state => state.auth.user);
+  
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const stickyHeader = () => {
+    window.addEventListener('scroll', () => {
+      if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        headerRef.current.classList.add('sticky_header');
+      } else {
+        headerRef.current.classList.remove('sticky_header');
+      }
+    });
   };
 
-  return (
-    <>
-      <div className="navigation-container flex-hz">
-        <div className="navigation-item-1">
-          <Link to="/" className="links">
-            <h5 className="lib-name-1">
-              Naari <span className="lib-name-2">Care</span>
-            </h5>
-          </Link>
-        </div>
-        <Link to="/" className="links lib-name-sm">
-          <h5 className="lib-name-1">
-            Naari <span className="lib-name-2">Care</span>
-          </h5>
-        </Link>
-        {!isMobile && <Searchbar />}
-        {token === undefined ? (
-          <>
-            <div className="navigation-item-3 flex-hz">
-              <Link to="/signin">
-                <button className="btn btn-primary">Signin</button>
-              </Link>
-              <Link to="/signin">
-                <FontAwesomeIcon
-                  className="cart-icon"
-                  icon={faShoppingBasket}
-                ></FontAwesomeIcon>
-              </Link>
-              <Link to="/signin">
-                <FontAwesomeIcon
-                  className="cart-icon"
-                  icon={faStar}
-                ></FontAwesomeIcon>
-              </Link>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="navigation-item-3 flex-hz">
-              <button className="btn btn-primary" onClick={handleLogout}>
-                Logout
-              </button>
-              <Link to="/user_profile">
-                <FontAwesomeIcon
-                  icon={faUserCircle}
-                  className="user-icon"
-                ></FontAwesomeIcon>
-              </Link>
-              <Link to="/cartpage">
-                <i className="fa fa-shopping-basket">
-                  <span className="badge-w-icon">{state.cart.length}</span>
-                </i>
-              </Link>
-              <Link to="/wishlistpage">
-                <i className="fa fa-star">
-                  <span className="badge-w-icon">{state.wishlist.length}</span>
-                </i>
-              </Link>
-            </div>
-          </>
-        )}
-      </div>
-    </>
-  );
-};
+  useEffect(() => {
+    stickyHeader();
 
-export { Header };
+    return () => window.removeEventListener('scroll', stickyHeader);
+  });
+
+  const menuToggle = () => menuRef.current.classList.toggle('active_menu');
+
+  const navigateToCart = () => {
+    navigate('/cart');
+  };
+
+  const Logout = () => {
+    dispatch(authActions.logout());
+    setShowUser(!showUser);
+  }
+
+  return (
+    <header className={styles.header} ref={headerRef}>
+      <Container>
+        <div className={styles.header_nav}>
+          <Logo />
+          <div className={styles.menu} ref={menuRef} onClick={menuToggle}>
+            <NavBar />
+          </div>
+          <div className={styles.header_icon}>
+            <div>
+              <span className={styles.cart_icon} onClick={navigateToCart}>
+                <RiShoppingBagLine />
+                <span className={styles.badge}>{products.length > 0 ? products.length : 0}</span>
+              </span>
+            </div>
+            <div>
+              <span className={styles.user_icon} onClick={() => setShowUser(!showUser)}>
+                <motion.img whileTap={{scale: 1.2}} src={userIcon} alt="userIcon" />
+              </span>
+              {
+                showUser && (
+                  <motion.ul
+                    className={styles.user_nav}
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {
+                      isLogged ? (
+                        <>
+                        <li className={styles.user_navItem}>
+                            <span className={`${styles.user_navLink} ${styles.user_name}`}>{user.fullName}</span>
+                          </li>
+                          <li className={styles.user_navItem}>
+                            <button className={styles.user_navLink} onClick={Logout}>Logout</button>
+                          </li>
+                          <li className={styles.user_navItem}>
+                            <Link className={styles.user_navLink} to="#">Profile</Link>
+                          </li>
+                        </>
+                      ) : (
+                        <>
+                          <li className={styles.user_navItem}>
+                            <Link className={styles.user_navLink} to="/signin">Login</Link>
+                          </li>
+                          <li className={styles.user_navItem}>
+                            <Link className={styles.user_navLink} to="/signup">Sign Up</Link>
+                          </li>
+                        </>
+                      )
+                    }
+                  </motion.ul>
+                )
+              }
+            </div>
+            <div className={styles.mobile_menu}>
+              <span onClick={menuToggle}>
+                <RiMenuLine />
+              </span>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </header>
+  );
+}
+
+export default Header;

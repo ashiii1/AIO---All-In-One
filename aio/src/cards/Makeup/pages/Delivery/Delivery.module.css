@@ -1,0 +1,24 @@
+.info {
+  margin-bottom: 40px;
+}
+
+.text {
+  font-size: .9rem;
+  margin-bottom: 15px;
+}
+
+.bold_text {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.accordion {
+  margin: auto;
+  width: 60%;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}

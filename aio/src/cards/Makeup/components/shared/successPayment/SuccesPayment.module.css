@@ -1,0 +1,68 @@
+.success_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message_box {
+  box-shadow: 0 15px 25px #00000019;
+  padding: 45px;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.success {
+  border-bottom: solid 4px #28a745;
+}
+
+.failed {
+  border-bottom: solid 4px #ef4444;
+}
+
+.success_title {
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+.details {
+  margin-bottom: 25px;
+}
+
+.details_title {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.total {
+  font-size: 1.2rem;
+}
+
+.bold_text {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.success_text {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 25px;
+  text-decoration: 1px underline var(--primary-color);
+  text-underline-offset: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .success_title {
+    font-size: 2rem;
+  }
+
+  .success_text {
+    font-size: 1rem;
+  }
+}

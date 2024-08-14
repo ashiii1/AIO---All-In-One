@@ -1,57 +1,44 @@
-import React from 'react'
-  import { Route, Routes } from "react-router-dom";
-  import { useContext, useEffect } from "react";
-  import { TopBar } from "./components/index.js";
-  import { Header } from './components/index.js';
-  import { StateContext } from "./Context";
-  import { HomePage, ProductListingPage, Signin, Signup, CartPage, WishlistPage, SingleProductPage, UserProfile, Checkout } from './pages/index.js'
-  import { setInitialUseraddress } from "./Services/addressService";
-  
-  const MakeUpApp = () => {
-    const { state, dispatch } = useContext(StateContext)
-    useEffect(() => {
-      async function fetchData() {
-        try {
-          const res = await fetch('/api/products', { method: "GET" })
-          const data = await res.json()
-          dispatch({ type: 'SET_PRODUCTS', payload: data.products })
-        } catch (e) {
-          console.log(e)
-        }
-      }
-      fetchData();
-    }, [])
-  
-    useEffect(() => {
-      setInitialUseraddress(state, dispatch)
-    }, [])
-  
-    return (
-      <>
-        <TopBar />
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/productlistingpage" element={<ProductListingPage />} />
-          <Route exact path="/signin" element={<Signin />} />
-          <Route exact path="/cartpage" element={<CartPage />} />
-          <Route exact path="/wishlistpage" element={<WishlistPage />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/product/:productId" element={<SingleProductPage />} />
-          <Route exact path="/user_profile" element={<UserProfile />} />
-          <Route exact path="/checkout" element={<Checkout />} />
-          <Route
-            path="*"
-            element={
-              <>
-                <h1>No page found</h1>
-              </>
-            }
-          />
-        </Routes>
-      </>
-    );
-  }
-  
+import React from 'react';
+import { createRoutesFromElements, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/Home/Home";
+import Shop from "./pages/Shop/Shop";
+import Contact from "./pages/Contact/Contact";
+import ProductDetail from "./pages/ProductDetails/ProductDetail";
+import Cart from "./pages/Cart/Cart";
+import Checkout from "./pages/Checkout/Checkout";
+import SignIn from "./pages/Account/signIn/SignIn";
+import SignUp from "./pages/Account/signUp/SignUp";
+import Delivery from "./pages/Delivery/Delivery";
+import Payment from "./pages/Payment/Payment";
+import Return from "./pages/Returns/Returns";
+import PaymentMethods from "./pages/PaymentMethod/PaymentMethod";
 
-export default MakeUpApp
+const MakeUpApp = () => {
+  const routes = createRoutesFromElements(
+    <>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/return" element={<Return />} />
+        <Route path="/paymentMethod" element={<PaymentMethods />} />
+      </Route>
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
+    </>
+  );
+
+  return (
+    <div>
+      {routes}
+    </div>
+  );
+};
+
+export default MakeUpApp;

@@ -1,0 +1,26 @@
+.accordion_item {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+  padding: 0 10px;
+}
+
+.accordion_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.accordion_icon {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .accordion_title {
+    font-size: .8rem;
+  }
+}

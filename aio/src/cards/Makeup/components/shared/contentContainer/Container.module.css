@@ -1,0 +1,12 @@
+.content {
+  min-width: var(--mobile);
+  max-width: var(--width);
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 1440px) { 
+  .content {
+    padding: 0 10px;
+  }
+}

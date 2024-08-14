@@ -1,0 +1,31 @@
+.credit_card {
+  background: linear-gradient(25deg, #fff, #eee);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  margin: auto;
+}
+
+.visa {
+  background: linear-gradient(25deg, #0f509e, #1399cd);
+}
+
+.mastercard {
+  background: linear-gradient(25deg, #ec6104, #f7d61b);
+}
+
+.form_group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .credit_card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.info {
+  margin-bottom: 40px;
+}
+
+.text {
+  font-size: .9rem;
+  margin-bottom: 15px;
+}
+
+.accordion {
+  margin: auto;
+  width: 60%;
+}
+
+.payment_methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment_item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.payment_item img {
+  width: 60px;
+  height: 40px;
+}
+
+.payment_name {
+  color: var(--primary-color);
+}

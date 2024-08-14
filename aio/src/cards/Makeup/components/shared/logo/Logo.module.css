@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo_title {
+  font-size: 1.5rem;
+}
+
+.logo_subtitle {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--blue-color);
+}

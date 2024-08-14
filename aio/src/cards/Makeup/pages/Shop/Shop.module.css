@@ -1,0 +1,84 @@
+.filter_section {
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.filter_sectionBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter_widget label {
+  margin-right: 10px;
+}
+
+.filter_widget select {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.filter_widget select:focus {
+  outline: none;
+}
+
+.filter_widget select option {
+  font-size: 0.9rem;
+}
+
+.filter_inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  padding-right: 12px;
+  padding-left: 2px;
+  cursor: pointer;
+  margin-left: auto;
+  width: 40%;
+}
+
+.filter_inputBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+}
+
+.filter_inputBox span {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.filter_inputBox span svg {
+  width: 20px;
+  height: 20px;
+}
+
+.result_text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .filter_sectionBox {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .filter_inputBox {
+    margin: auto;
+    width: 90%;
+  }
+  
+  .filter_widget select {
+    padding: 7px 20px;
+    font-size: 0.9rem;
+  }
+}

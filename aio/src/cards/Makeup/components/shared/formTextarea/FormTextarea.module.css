@@ -1,0 +1,25 @@
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 5px 15px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.error {
+  font-size: .9rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  padding: 0 15px;
+  color: #ef4444;
+  text-align: left;
+}

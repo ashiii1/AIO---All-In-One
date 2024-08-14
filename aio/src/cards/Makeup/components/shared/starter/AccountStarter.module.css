@@ -1,0 +1,107 @@
+.container {
+  color: #fff;
+  width: 50%;
+  height: 100%;
+}
+
+.content {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  background: var(--primary-color);
+  width: 450px;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo_title {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.logo_subtitle {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--blue-color);
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+.list_box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.list_boxSpan {
+  color: #22c55e;
+  line-height: 1.5rem;
+}
+
+.list_boxSpan svg{
+  width: 16px;
+  height: 16px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.list_boxText {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--small-text-color);
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.list_item {
+  color: var(--small-text-color);
+  font-weight: 600;
+  font-size: .9rem;
+  line-height: 1.25rem;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.list_item p {
+  transition: all .3s ease-in-out;
+}
+
+.list_item:hover,
+.list_item p:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 905px) {
+  .container {
+    display: none;
+  }
+}
