@@ -8,12 +8,16 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Payment from './components/Payment';
 import WishList from './components/WishList';
+import MainCart from '../MainCart';
+
 
 
 const BookApp = () => {
    
     
       return (
+          <>
+        <MainCart/>
         <div className="App">
           <Routes>
             <Route path="/" element={<><Navbar/><Categories/><Footer/></>} />
@@ -25,6 +29,7 @@ const BookApp = () => {
             <Route path="/wishlist" element={<><Navbar /><WishList/></>} />
           </Routes>
         </div>
+          </>
       );
     }
     
