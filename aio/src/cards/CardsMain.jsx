@@ -2,6 +2,7 @@ import React from 'react';
 import  { useEffect, useState } from 'react';
 import MainProd from './MainProd';
 import AliceCarousel from "react-alice-carousel";
+import { ShoppingCart } from 'lucide-react'; 
 
 
 
@@ -25,6 +26,17 @@ const cardsData = [
 const Navbar = () => {
   return (
     <div>
+       <div className='p-4 bg-red-100 text-black pb-1 text-center pt-2 flex justify-between items-center'>
+        <div className="flex-grow text-center">
+          <span className="text-lg font-bold">Discover Exciting New Categories</span>
+        </div>
+        <div className="flex items-center">
+          <ShoppingCart className="w-10 h-10 text-black" />
+          <div className=''> 
+          <span className="ml-0.5 text-lg ">Main Cart</span> 
+        </div>
+        </div>
+      </div>
       <nav className="bg-red-300 text-black text-xl p-1 shadow-md">
         <ul className="flex justify-around p-2 space-x-4">
           <li className="bg-red-400 font-bold text-2xl">ASHI</li>
@@ -49,7 +61,7 @@ const BannerSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000); // 5 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -116,8 +128,7 @@ function LandingPage({ products = [] }) {
       id="home"
       className="containe mx-auto mb-5 px-2 mt-5 md:mt-[110px]"
     >
-      {/* Banner Carousel */}
-      <div className="mb-4 w-full h-[50vh]  overflow-hidden"> {/* Set height to 50% of viewport height */}
+      <div className="mb-4 w-full h-[50vh]  overflow-hidden"> 
         <AliceCarousel
           autoPlay
           autoPlayInterval={3000}
@@ -126,7 +137,7 @@ function LandingPage({ products = [] }) {
           disableButtonsControls
           mouseTracking
           items={banners.map((banner, index) => (
-            <div key={index} className="w-full h-full"> {/* Full width and height */}
+            <div key={index} className="w-full h-full"> 
               <img
                 src={banner}
                 alt="Banner"
