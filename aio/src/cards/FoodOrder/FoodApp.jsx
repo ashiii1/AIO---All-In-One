@@ -62,12 +62,15 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import CardDetail from './pages/CardDetail/CardDetail'; // Import the new component
 import { Route, Routes } from 'react-router-dom';
 import LoginPopup from './Components/LoginPopup/LoginPopup';
+import MainCart from '../MainCart';
+
 
 const FoodApp = () => {
   const [showLogin, setShowLogin] = useState(false);
 
   return (
     <>
+           <MainCart/>
       {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
       <div className='app'>
         <Navbar setShowLogin={setShowLogin}/>
