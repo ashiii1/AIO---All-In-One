@@ -12,12 +12,10 @@ import NotFound from "./pages/NotFound";
 import Cart from "./components/cart/Cart";
 import Wishlist from "./components/wishlist/Wishlist";
 import './css/Furniture.css'
-import MainCart from "../MainCart";
 
 
 const FurnitureApp = () => {    return (
       <>
-      <MainCart/>
         <Routes>
           {/* Home-page route */}
           {/* <Route path="/" element={<HomeLayout />} /> */}
