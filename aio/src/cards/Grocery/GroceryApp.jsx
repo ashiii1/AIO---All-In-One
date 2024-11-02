@@ -35,6 +35,7 @@ import MyAccountSignIn from "./pages/Accounts/MyAccountSignIn";
 import MyAccountSignUp from "./pages/Accounts/MyAccountSignUp";
 import MaxCashback from "./Component/MaxCashback";
 import Header from "./Component/Header";
+import MainCart from '../MainCart'
 
 
 
@@ -44,7 +45,7 @@ import Header from "./Component/Header";
 const GroceryApp = () => {
     return (
     <div>
-      
+      <MainCart/>
         <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
